@@ -8,6 +8,7 @@ html {
 
 body {
   margin: 0;
+  background: var(--bg);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
 }
@@ -20,4 +21,33 @@ html:lang(th) body {
 :focus-visible {
   outline: 2px solid var(--sage-ink);
   outline-offset: 3px;
+}
+
+/* ป้ายหัวข้อแบบมีขีดเส้นใต้ — EN ตัวห่าง, TH ไม่ห่าง */
+.section-label {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--sage-ink);
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--sage-ink);
+}
+html:lang(en) .section-label {
+  letter-spacing: 0.16em;
+}
+
+/* คำเน้นในย่อหน้า */
+.hl {
+  color: var(--sage-ink);
+  font-weight: 700;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0s !important;
+  }
 }

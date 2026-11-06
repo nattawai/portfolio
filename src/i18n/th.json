@@ -4,7 +4,11 @@
     "projects": "ผลงาน",
     "experience": "ประสบการณ์",
     "contact": "ติดต่อ",
-    "resume": "Resume"
+    "resume": "Resume",
+    "about": "เกี่ยวกับ",
+    "toLight": "เปลี่ยนเป็นธีมสว่าง",
+    "toDark": "เปลี่ยนเป็นธีมมืด",
+    "skills": "ทักษะ"
   },
   "hero": {
     "greeting": "สวัสดีครับ ผม",
@@ -28,8 +32,8 @@
     "title": "เกี่ยวกับผม",
     "lead": "9 ปีกับระบบที่ข้อมูลผิดไม่ได้",
     "body": [
-      "ผมพัฒนาระบบให้หน่วยงานรัฐ มหาวิทยาลัย และภาคเอกชนมากว่า 9 ปี งานส่วนใหญ่เป็นระบบที่ต้องแม่นยำและตรวจสอบได้ ทั้งการเงิน การบริหารความเสี่ยง การควบคุมภายใน แผนงานโครงการ และ HR",
-      "ผมเริ่มจากการเข้าใจขั้นตอนงานจริงของผู้ใช้ก่อนเขียนโค้ด แล้วออกแบบให้ระบบดูแลต่อได้ง่าย และเชื่อมกับระบบเดิมขององค์กรได้ เช่น ERP, Workflow Engine และ E-Signature"
+      "ผมพัฒนาระบบให้<hl>หน่วยงานรัฐ มหาวิทยาลัย และภาคเอกชน</hl>มากว่า 9 ปี งานส่วนใหญ่เป็นระบบที่ต้อง<hl>แม่นยำและตรวจสอบได้</hl> ทั้งการเงิน การบริหารความเสี่ยง การควบคุมภายใน แผนงานโครงการ และ HR",
+      "ผมเริ่มจากการเข้าใจขั้นตอนงานจริงของผู้ใช้ก่อนเขียนโค้ด แล้วออกแบบให้ระบบ<hl>ดูแลต่อได้ง่าย</hl> และเชื่อมกับระบบเดิมขององค์กรได้ เช่น ERP, Workflow Engine และ E-Signature"
     ],
     "stats": [
       {
@@ -44,7 +48,9 @@
         "value": "3",
         "label": "แพลตฟอร์ม: Web · Mobile · API"
       }
-    ]
+    ],
+    "lookingTitle": "สิ่งที่ผมกำลังมองหา",
+    "lookingBody": "ทีมที่สร้าง<hl>ระบบที่คนใช้งานจริง</hl> โดยเฉพาะงาน <hl>Backend</hl> และการนำ <hl>AI</hl> มาช่วยในระบบที่ข้อมูลต้องถูกต้อง ทั้งงานประจำและงานโปรเจกต์"
   },
   "projects": {
     "title": "ผลงานเด่น",
@@ -138,70 +144,12 @@
         "title": "Workflow และ E-Signature",
         "desc": "API เชื่อมระบบ ERP กับ Nintex K2 พัฒนา workflow บน Nintex Workflow Cloud และเชื่อมต่อ DocuSign เพื่อเซ็นเอกสารออนไลน์"
       }
-    ]
+    ],
+    "soon": "ยังไม่เปิดสาธารณะ"
   },
   "experience": {
-    "title": "ทักษะและประสบการณ์",
-    "lead": "เครื่องมือที่ใช้ และเส้นทางที่ผ่านมา",
-    "skillsTitle": "ทักษะ",
-    "timelineTitle": "ประสบการณ์ทำงาน",
+    "title": "ประสบการณ์",
     "eduTitle": "การศึกษา",
-    "skills": [
-      {
-        "group": "ภาษาโปรแกรม",
-        "items": [
-          "TypeScript",
-          "JavaScript",
-          "C#",
-          "Dart",
-          "PHP"
-        ]
-      },
-      {
-        "group": "Frontend",
-        "items": [
-          "React",
-          "Next.js",
-          "Tailwind CSS",
-          "Ant Design"
-        ]
-      },
-      {
-        "group": "Backend",
-        "items": [
-          "Node.js",
-          "ASP.NET",
-          "Hono",
-          "REST API"
-        ]
-      },
-      {
-        "group": "Mobile",
-        "items": [
-          "Flutter",
-          "iOS (Objective-C)",
-          "Android (Java)"
-        ]
-      },
-      {
-        "group": "Database",
-        "items": [
-          "PostgreSQL",
-          "MySQL",
-          "SQL Server",
-          "Cloudflare D1"
-        ]
-      },
-      {
-        "group": "Integration & AI",
-        "items": [
-          "Nintex K2 / Workflow Cloud",
-          "DocuSign",
-          "ERP API",
-          "Claude Code (Agents, Plugins, Hooks)"
-        ]
-      }
-    ],
     "jobs": [
       {
         "years": "2569 – ปัจจุบัน",
@@ -254,7 +202,8 @@
         "บริการผู้โดยสารที่ท่าอากาศยานสุวรรณภูมิ",
         "จัดทำรายงานเที่ยวบิน"
       ]
-    }
+    },
+    "current": "ปัจจุบัน"
   },
   "contact": {
     "title": "ติดต่อ",
@@ -269,5 +218,65 @@
     "emailLabel": "ส่งอีเมล",
     "resume": "ดาวน์โหลด Resume",
     "footer": "ออกแบบและพัฒนาโดยณัฐศักดิ์ · สร้างด้วย React และ web-studio"
+  },
+  "skills": {
+    "title": "ทักษะ",
+    "groups": [
+      {
+        "group": "ใช้อยู่ตอนนี้",
+        "items": [
+          "TypeScript",
+          "JavaScript",
+          "C#",
+          "React",
+          "Next.js",
+          "Tailwind CSS",
+          "Ant Design",
+          "Node.js",
+          "ASP.NET",
+          "Hono",
+          "REST API",
+          "PostgreSQL",
+          "SQL Server",
+          "Cloudflare Workers",
+          "Cloudflare D1",
+          "Flutter",
+          "Dart",
+          "Nintex K2 / Workflow Cloud",
+          "DocuSign",
+          "ERP API"
+        ]
+      },
+      {
+        "group": "กำลังทดลอง",
+        "items": [
+          "Claude Code",
+          "Agent Skills & Plugins",
+          "Hooks & Subagents",
+          "Model Context Protocol (MCP)",
+          "GSAP",
+          "Vitest"
+        ]
+      },
+      {
+        "group": "เคยใช้",
+        "items": [
+          "PHP",
+          "MySQL",
+          "iOS (Objective-C)",
+          "Android (Java)"
+        ]
+      },
+      {
+        "group": "งานที่ถนัด",
+        "items": [
+          "ระบบการเงิน",
+          "Risk Control Management",
+          "ระบบ HR",
+          "AI Integration"
+        ],
+        "focus": true
+      }
+    ]
   }
 }

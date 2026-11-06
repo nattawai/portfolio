@@ -1,4 +1,6 @@
 import { useTranslation } from 'react-i18next'
+import { Section } from '../components/Section'
+import { ArrowUpRight, MailIcon } from '../components/Icons'
 
 // Resume: วางไฟล์ที่ public/resume.pdf แล้วเปลี่ยนเป็น true
 const HAS_RESUME = false
@@ -8,43 +10,43 @@ export function Contact() {
   const email = t('contact.email')
   const github = t('contact.github', { returnObjects: true }) as string[]
 
-  const link = 'rounded-full border border-ink/15 bg-surface px-5 py-2.5 font-semibold shadow-soft transition-transform hover:-translate-y-0.5'
+  const link = 'inline-flex items-center gap-1.5 rounded-full border border-ink/15 px-4 py-2 text-sm font-semibold transition-colors hover:bg-surface'
 
   return (
-    <section id="contact" aria-labelledby="contact-title" className="relative isolate overflow-hidden">
-      {/* blob ทั้งสองมาบรรจบกันตอนจบเรื่อง (ขั้น Motion) */}
-      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
-        <div data-speed="0.5" className="absolute left-1/4 top-1/4 size-72 rounded-full bg-sage/30 blur-3xl" />
-        <div data-speed="0.2" className="absolute right-1/4 top-1/3 size-64 rounded-full bg-clay/25 blur-3xl" />
-      </div>
+    <>
+      <Section id="contact" label={t('contact.title')}>
+        <p data-reveal className="text-[clamp(1.75rem,4.5vw,2.5rem)] font-extrabold leading-tight [html:lang(th)_&]:leading-[1.25]">
+          {t('contact.lead')}
+        </p>
+        <p data-reveal className="mt-3 text-lg leading-relaxed text-ink-soft">{t('contact.body')}</p>
 
-      <div className="mx-auto max-w-3xl px-4 py-28 text-center sm:px-8">
-        <h2 id="contact-title" className="text-sm font-semibold uppercase text-sage-ink [html:lang(en)_&]:tracking-[0.2em]">
-          {t('contact.title')}
-        </h2>
-        <p data-reveal className="mt-4 text-[clamp(2rem,6vw,3.5rem)] font-extrabold leading-tight">{t('contact.lead')}</p>
-        <p data-reveal className="mx-auto mt-4 max-w-xl text-lg text-ink-soft">{t('contact.body')}</p>
-
-        <a data-reveal href={`mailto:${email}`} className="mt-10 inline-block rounded-full bg-clay px-8 py-4 text-lg font-bold text-ink shadow-soft transition-transform hover:-translate-y-0.5">
-          {t('contact.emailLabel')} · <span className="break-all">{email}</span>
+        <a
+          data-reveal
+          href={`mailto:${email}`}
+          className="mt-8 inline-flex max-w-full items-center gap-2 rounded-full bg-clay px-6 py-3 font-bold text-on-clay shadow-soft transition-transform hover:-translate-y-0.5"
+        >
+          <MailIcon className="size-5 shrink-0" />
+          <span className="break-all">{email}</span>
         </a>
 
-        <div data-reveal className="mt-6 flex flex-wrap justify-center gap-3">
-          <a href={t('contact.linkedin')} target="_blank" rel="noopener noreferrer" className={link}>LinkedIn ↗</a>
+        <div data-reveal className="mt-5 flex flex-wrap gap-2">
+          <a href={t('contact.linkedin')} target="_blank" rel="noopener noreferrer" className={link}>
+            LinkedIn <ArrowUpRight />
+          </a>
           {github.map((g) => (
             <a key={g} href={g} target="_blank" rel="noopener noreferrer" className={link}>
-              GitHub · {g.split('/').pop()} ↗
+              GitHub · {g.split('/').pop()} <ArrowUpRight />
             </a>
           ))}
           {HAS_RESUME && (
             <a href="/resume.pdf" download className={link}>{t('contact.resume')} ⬇</a>
           )}
         </div>
-      </div>
+      </Section>
 
-      <footer className="border-t border-ink/10 px-4 py-6 text-center text-sm text-ink-soft">
+      <footer className="mx-auto max-w-5xl border-t border-ink/10 px-4 py-6 text-center text-sm text-ink-soft sm:px-8">
         © {new Date().getFullYear()} · {t('contact.footer')}
       </footer>
-    </section>
+    </>
   )
 }

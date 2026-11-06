@@ -5,7 +5,7 @@ workflow: `web-studio` plugin (`E:\Workspace\Claude Plugins\web-studio`)
 | ขั้น | สถานะ |
 |---|---|
 | 1. Brief | ✅ `docs/brief.md` |
-| 2. Direction | ✅ Soft Studio — `docs/design.md` |
+| 2. Direction | ✅ Night Studio (redesign 2026-11-07, branch `redesign/faseeh-moritz`) — `docs/design.md` |
 | 3. Structure | ✅ 5 sections + stack อนุมัติแล้ว |
 | 4. Scaffold | ✅ React + Vite + TS, tokens, i18n |
 | 5. Build | ✅ ครบ 5 section (Hero, About, Projects, Experience, Contact) |
@@ -45,6 +45,10 @@ workflow: `web-studio` plugin (`E:\Workspace\Claude Plugins\web-studio`)
 
 | 2026-11-07 | **ห้ามระบุชื่อลูกค้า/หน่วยงาน** (รัฐวิสาหกิจ, มหาวิทยาลัย) ทั้งในเว็บ, repo และภาพ — ใช้คำกลาง ๆ เช่น "รัฐวิสาหกิจ", "มหาวิทยาลัยรัฐ"; ห้ามใช้ชื่อแอปที่ชี้ตัวลูกค้า | ผู้ใช้แจ้ง: ข้อมูลลับ เปิดเผยไม่ได้ |
 | 2026-11-07 | ล้าง git history เป็น commit เดียว (force push), ลบ Pages `natthasak-portfolio` และ deployment เก่าทั้งหมด | เวอร์ชันเก่ามีชื่อลูกค้า — ลบ repo เก่าแล้วสร้าง `nattawai/portfolio` ใหม่ (id 1448639097) — commit เก่า 404 แล้ว ✅; สร้าง Pages `nattawai-portfolio` ใหม่ผูก repo ใหม่ + โดเมนเดิม |
+| 2026-11-07 | Redesign: layout แบบ faseeh ทุก section, Projects เป็นเวทีแบบ moritz, โทน "มืดอุ่น" + ปุ่มสลับธีม (ค่าเริ่มตามเครื่อง) | ผู้ใช้เลือก; contrast ผ่าน AA ทั้งสองธีม (ตารางใน design.md) |
+| 2026-11-07 | ภาพในจอ Projects เป็น SVG นามธรรม (`ProjectArt.tsx`) ทุกงาน | ห้ามใช้ภาพหน้าจอระบบลูกค้า |
+| 2026-11-07 | Skills แยกเป็น section แบบ faseeh: ใช้อยู่ / กำลังทดลอง / เคยใช้ / งานที่ถนัด + ไอคอน simple-icons (CC0) | ผู้ใช้ขอให้เหมือน faseeh; การจัดกลุ่มอนุมานจาก timeline — ให้ผู้ใช้ตรวจ |
+| 2026-11-07 | ไม่ใส่ reveal animation ให้ข้อความ Hero/About ส่วนบน | reveal ทำให้ LCP mobile 3.3s (perf 87) → เอาออกแล้ว 1.9s (perf 96–97) |
 ## Deploy
 push เข้า `main` → Cloudflare build (`npm run build`, output `dist`) และ deploy เอง
 gh ในเครื่อง active = natthasak-w ต้องสลับก่อน push:

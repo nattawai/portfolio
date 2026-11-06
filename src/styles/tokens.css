@@ -1,28 +1,70 @@
-/* Design tokens — Soft Studio. แหล่งความจริงเดียว: docs/design.md */
+/* Design tokens — Night Studio. แหล่งความจริงเดียว: docs/design.md */
+
+/* สว่าง (fallback เมื่อเครื่องตั้งเป็น light) */
 :root {
   --bg: #faf6f1;
   --surface: #ffffff;
+  --surface-2: #f1ebe3;
   --ink: #3a332d;
   --ink-soft: #6b625a;
   --sage: #8fa68a;      /* ตกแต่งเท่านั้น ห้ามใช้เป็นตัวหนังสือ */
-  --sage-ink: #5b7556;  /* ลิงก์ / ป้ายกำกับ */
-  --clay: #d49266;      /* ปุ่มหลัก / จุดเน้น (ตัวหนังสือบนปุ่มใช้ --ink) */
+  --sage-ink: #5b7556;  /* คำเน้น / ป้าย / ลิงก์ */
+  --clay: #d49266;      /* พื้นปุ่มหลัก ห้ามใช้เป็นตัวหนังสือ */
+  --on-clay: #3a332d;   /* ตัวหนังสือบนปุ่ม clay */
+  --bezel: #3a332d;     /* กรอบจอใน Projects */
 
   --radius-card: 1.25rem;
   --shadow-soft: 0 10px 30px -12px rgb(58 51 45 / 0.18);
+  color-scheme: light;
+}
+
+/* มืด (ธีมหลัก) — ใช้เมื่อเครื่องตั้ง dark และผู้ชมไม่ได้เลือก light เอง หรือเลือก dark เอง */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1c1a17;
+    --surface: #26231f;
+    --surface-2: #302c27;
+    --ink: #ede6dc;
+    --ink-soft: #b3a99d;
+    --sage: #7d9677;
+    --sage-ink: #9db896;
+    --clay: #d9a07a;
+    --on-clay: #1c1a17;
+    --bezel: #0e0d0b;
+    --shadow-soft: 0 12px 32px -12px rgb(0 0 0 / 0.55);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1c1a17;
+  --surface: #26231f;
+  --surface-2: #302c27;
+  --ink: #ede6dc;
+  --ink-soft: #b3a99d;
+  --sage: #7d9677;
+  --sage-ink: #9db896;
+  --clay: #d9a07a;
+  --on-clay: #1c1a17;
+  --bezel: #0e0d0b;
+  --shadow-soft: 0 12px 32px -12px rgb(0 0 0 / 0.55);
+  color-scheme: dark;
 }
 
 /* ให้ Tailwind v4 สร้าง utility จาก token: bg-bg, text-ink, bg-clay ... */
 @theme inline {
   --color-bg: var(--bg);
   --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
   --color-ink: var(--ink);
   --color-ink-soft: var(--ink-soft);
   --color-sage: var(--sage);
   --color-sage-ink: var(--sage-ink);
   --color-clay: var(--clay);
+  --color-on-clay: var(--on-clay);
+  --color-bezel: var(--bezel);
 
   --font-sans: "Manrope", "Anuphan", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Anuphan", ui-monospace, monospace;
   --radius-card: var(--radius-card);
   --shadow-soft: var(--shadow-soft);
 }

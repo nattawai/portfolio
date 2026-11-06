@@ -4,7 +4,11 @@
     "projects": "Projects",
     "experience": "Experience",
     "contact": "Contact",
-    "resume": "Resume"
+    "resume": "Resume",
+    "about": "About",
+    "toLight": "Switch to light theme",
+    "toDark": "Switch to dark theme",
+    "skills": "Skills"
   },
   "hero": {
     "greeting": "Hi, I'm",
@@ -28,8 +32,8 @@
     "title": "About",
     "lead": "9 years building systems where data has to be right",
     "body": [
-      "For 9+ years I have built systems for government agencies, universities and private companies — mostly where accuracy and auditability matter: finance, risk management, internal control, project planning and HR.",
-      "I start by understanding how people actually work, then design systems that are easy to maintain and connect cleanly to what an organisation already runs, such as ERP, workflow engines and e-signature."
+      "For 9+ years I have built systems for <hl>government agencies, universities and private companies</hl> — mostly where <hl>accuracy and auditability</hl> matter: finance, risk management, internal control, project planning and HR.",
+      "I start by understanding how people actually work, then design systems that are <hl>easy to maintain</hl> and connect cleanly to what an organisation already runs, such as ERP, workflow engines and e-signature."
     ],
     "stats": [
       {
@@ -44,7 +48,9 @@
         "value": "3",
         "label": "Platforms: Web · Mobile · API"
       }
-    ]
+    ],
+    "lookingTitle": "What I'm looking for",
+    "lookingBody": "A team building <hl>systems people actually use</hl> — especially <hl>backend</hl> work and bringing <hl>AI</hl> into systems where data has to be right. Full-time or project-based."
   },
   "projects": {
     "title": "Selected projects",
@@ -138,70 +144,12 @@
         "title": "Workflow & E-Signature",
         "desc": "APIs connecting ERP to Nintex K2, workflows on Nintex Workflow Cloud, and a DocuSign integration for online signing."
       }
-    ]
+    ],
+    "soon": "Not public yet"
   },
   "experience": {
-    "title": "Skills & experience",
-    "lead": "The tools I use and the road so far",
-    "skillsTitle": "Skills",
-    "timelineTitle": "Work experience",
+    "title": "Experience",
     "eduTitle": "Education",
-    "skills": [
-      {
-        "group": "Languages",
-        "items": [
-          "TypeScript",
-          "JavaScript",
-          "C#",
-          "Dart",
-          "PHP"
-        ]
-      },
-      {
-        "group": "Frontend",
-        "items": [
-          "React",
-          "Next.js",
-          "Tailwind CSS",
-          "Ant Design"
-        ]
-      },
-      {
-        "group": "Backend",
-        "items": [
-          "Node.js",
-          "ASP.NET",
-          "Hono",
-          "REST API"
-        ]
-      },
-      {
-        "group": "Mobile",
-        "items": [
-          "Flutter",
-          "iOS (Objective-C)",
-          "Android (Java)"
-        ]
-      },
-      {
-        "group": "Database",
-        "items": [
-          "PostgreSQL",
-          "MySQL",
-          "SQL Server",
-          "Cloudflare D1"
-        ]
-      },
-      {
-        "group": "Integration & AI",
-        "items": [
-          "Nintex K2 / Workflow Cloud",
-          "DocuSign",
-          "ERP API",
-          "Claude Code (Agents, Plugins, Hooks)"
-        ]
-      }
-    ],
     "jobs": [
       {
         "years": "2026 – Present",
@@ -254,7 +202,8 @@
         "Served passengers at Suvarnabhumi Airport",
         "Prepared flight reports"
       ]
-    }
+    },
+    "current": "Current"
   },
   "contact": {
     "title": "Contact",
@@ -269,5 +218,65 @@
     "emailLabel": "Email me",
     "resume": "Download resume",
     "footer": "Designed and built by Natthasak · Made with React and web-studio"
+  },
+  "skills": {
+    "title": "Skills",
+    "groups": [
+      {
+        "group": "Currently working with",
+        "items": [
+          "TypeScript",
+          "JavaScript",
+          "C#",
+          "React",
+          "Next.js",
+          "Tailwind CSS",
+          "Ant Design",
+          "Node.js",
+          "ASP.NET",
+          "Hono",
+          "REST API",
+          "PostgreSQL",
+          "SQL Server",
+          "Cloudflare Workers",
+          "Cloudflare D1",
+          "Flutter",
+          "Dart",
+          "Nintex K2 / Workflow Cloud",
+          "DocuSign",
+          "ERP API"
+        ]
+      },
+      {
+        "group": "Experimenting with",
+        "items": [
+          "Claude Code",
+          "Agent Skills & Plugins",
+          "Hooks & Subagents",
+          "Model Context Protocol (MCP)",
+          "GSAP",
+          "Vitest"
+        ]
+      },
+      {
+        "group": "Previously used",
+        "items": [
+          "PHP",
+          "MySQL",
+          "iOS (Objective-C)",
+          "Android (Java)"
+        ]
+      },
+      {
+        "group": "Focus areas",
+        "items": [
+          "Finance systems",
+          "Risk Control Management",
+          "HR systems",
+          "AI integration"
+        ],
+        "focus": true
+      }
+    ]
   }
 }

@@ -1,6 +1,10 @@
-import { useTranslation } from 'react-i18next'
+import { Trans, useTranslation } from 'react-i18next'
+import { Section } from '../components/Section'
 
 type Stat = { value: string; label: string }
+
+// <hl>คำ</hl> ในไฟล์แปล → คำเน้นสีเสจ
+const HL = { hl: <strong className="hl" /> }
 
 export function About() {
   const { t } = useTranslation()
@@ -8,38 +12,34 @@ export function About() {
   const stats = t('about.stats', { returnObjects: true }) as Stat[]
 
   return (
-    <section id="about" aria-labelledby="about-title" className="relative isolate overflow-hidden">
-      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
-        <div data-speed="0.4" className="absolute -right-24 top-1/3 size-72 rounded-full bg-sage/20 blur-3xl" />
+    <Section id="about" label={t('about.title')}>
+      <p className="text-[clamp(1.375rem,3vw,1.75rem)] font-bold leading-snug [html:lang(th)_&]:leading-[1.45]">
+        {t('about.lead')}
+      </p>
+
+      {body.map((_, i) => (
+        <p data-reveal key={i} className="mt-5 text-lg leading-relaxed text-ink-soft">
+          <Trans i18nKey={`about.body.${i}`} components={HL} />
+        </p>
+      ))}
+
+      <dl className="mt-10 grid grid-cols-3 gap-3 sm:gap-4">
+        {stats.map((s) => (
+          <div data-reveal key={s.label} className="flex flex-col-reverse justify-end rounded-card bg-surface p-4 sm:p-5">
+            <dt className="mt-1 text-xs leading-snug text-ink-soft sm:text-sm">{s.label}</dt>
+            <dd data-count className="text-3xl font-extrabold text-ink sm:text-4xl">{s.value}</dd>
+          </div>
+        ))}
+      </dl>
+
+      <div data-reveal className="mt-10 rounded-r-card border-l-2 border-sage-ink bg-surface/60 py-5 pl-5 pr-4">
+        <p className="font-mono text-xs font-medium uppercase text-sage-ink [html:lang(en)_&]:tracking-[0.16em]">
+          {t('about.lookingTitle')}
+        </p>
+        <p className="mt-2 leading-relaxed">
+          <Trans i18nKey="about.lookingBody" components={HL} />
+        </p>
       </div>
-
-      <div className="mx-auto grid max-w-6xl gap-12 px-4 py-24 sm:px-8 md:grid-cols-[1fr_1.3fr] md:gap-16">
-        <div>
-          <h2 id="about-title" className="text-sm font-semibold uppercase text-sage-ink [html:lang(en)_&]:tracking-[0.2em]">
-            {t('about.title')}
-          </h2>
-          <p data-reveal className="mt-4 text-[clamp(1.75rem,4vw,2.75rem)] font-bold leading-tight">
-            {t('about.lead')}
-          </p>
-        </div>
-
-        <div>
-          {body.map((p) => (
-            <p data-reveal key={p} className="mb-5 text-lg leading-relaxed text-ink-soft">
-              {p}
-            </p>
-          ))}
-
-          <dl className="mt-10 grid grid-cols-3 gap-3 sm:gap-4">
-            {stats.map((s) => (
-              <div data-reveal key={s.label} className="flex flex-col-reverse justify-end rounded-card bg-surface p-4 shadow-soft sm:p-6">
-                <dt className="mt-1 text-xs leading-snug text-ink-soft sm:text-sm">{s.label}</dt>
-                <dd data-count className="text-3xl font-extrabold text-ink sm:text-4xl">{s.value}</dd>
-              </div>
-            ))}
-          </dl>
-        </div>
-      </div>
-    </section>
+    </Section>
   )
 }
