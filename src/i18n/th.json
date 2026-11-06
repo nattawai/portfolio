@@ -1,0 +1,273 @@
+{
+  "nav": {
+    "brand": "ณัฐศักดิ์ ว.",
+    "projects": "ผลงาน",
+    "experience": "ประสบการณ์",
+    "contact": "ติดต่อ",
+    "resume": "Resume"
+  },
+  "hero": {
+    "greeting": "สวัสดีครับ ผม",
+    "firstName": "ณัฐศักดิ์",
+    "lastName": "วิวัฒน์วิศวกร",
+    "role": "Senior Full-Stack Developer",
+    "focus": "เน้น Backend และการนำ AI มาใช้ในระบบจริง",
+    "tagline": "ผมสร้างระบบที่ข้อมูลต้องถูกต้องและเชื่อถือได้ ทั้งงานการเงิน การบริหารความเสี่ยง และระบบ HR",
+    "domains": [
+      "ระบบการเงิน",
+      "Risk Control Management",
+      "ระบบ HR",
+      "AI Integration"
+    ],
+    "domainsLabel": "งานที่เคยทำ",
+    "photoAlt": "รูปโปรไฟล์ของณัฐศักดิ์",
+    "ctaProjects": "ดูผลงาน",
+    "ctaContact": "ติดต่อ"
+  },
+  "about": {
+    "title": "เกี่ยวกับผม",
+    "lead": "9 ปีกับระบบที่ข้อมูลผิดไม่ได้",
+    "body": [
+      "ผมพัฒนาระบบให้หน่วยงานรัฐ มหาวิทยาลัย และภาคเอกชนมากว่า 9 ปี งานส่วนใหญ่เป็นระบบที่ต้องแม่นยำและตรวจสอบได้ ทั้งการเงิน การบริหารความเสี่ยง การควบคุมภายใน แผนงานโครงการ และ HR",
+      "ผมเริ่มจากการเข้าใจขั้นตอนงานจริงของผู้ใช้ก่อนเขียนโค้ด แล้วออกแบบให้ระบบดูแลต่อได้ง่าย และเชื่อมกับระบบเดิมขององค์กรได้ เช่น ERP, Workflow Engine และ E-Signature"
+    ],
+    "stats": [
+      {
+        "value": "9+",
+        "label": "ปีประสบการณ์"
+      },
+      {
+        "value": "12",
+        "label": "ระบบที่ส่งมอบ"
+      },
+      {
+        "value": "3",
+        "label": "แพลตฟอร์ม: Web · Mobile · API"
+      }
+    ]
+  },
+  "projects": {
+    "title": "ผลงานเด่น",
+    "lead": "ผลงานที่เลือกมา ทั้งงาน AI งานที่ใช้งานจริง และระบบองค์กร",
+    "tags": {
+      "ai": "AI",
+      "live": "ใช้งานจริง",
+      "oss": "Open source",
+      "enterprise": "ระบบองค์กร"
+    },
+    "demo": "ดูเว็บ",
+    "code": "ดูโค้ด",
+    "private": "ระบบภายในองค์กร — ไม่เปิดเผยสาธารณะ",
+    "items": [
+      {
+        "id": "ai-office",
+        "tag": "ai",
+        "stack": [
+          "Node.js",
+          "Claude Code Hooks",
+          "Pixel Art"
+        ],
+        "links": {},
+        "title": "AI Virtual Office",
+        "desc": "สำนักงานเสมือนแบบ pixel art ที่แสดงการทำงานจริงของ AI agent (Claude Code) แบบเรียลไทม์ ผ่าน hook ที่ส่ง event จากทุก session"
+      },
+      {
+        "id": "web-studio",
+        "tag": "ai",
+        "stack": [
+          "Claude Code",
+          "Skills",
+          "Subagents"
+        ],
+        "links": {
+          "code": "https://github.com/nattawai/web-studio"
+        },
+        "title": "web-studio — Claude Code Plugin",
+        "desc": "plugin ที่ทำ workflow สร้างเว็บครบวงจร ตั้งแต่ brief จนถึง deploy เลือก framework ตามงาน และมีจุดรออนุมัติ เว็บนี้ก็สร้างด้วย plugin ตัวนี้"
+      },
+      {
+        "id": "ts-planner",
+        "tag": "live",
+        "stack": [
+          "JavaScript",
+          "Python",
+          "Data extraction"
+        ],
+        "links": {
+          "demo": "https://ts-planner.waivern.org"
+        },
+        "title": "TS Classic Planner",
+        "desc": "เว็บวางแผนสกิล สเตตัส EXP และแผนที่สำหรับเกม TS Online Classic มีผู้เล่นใช้งานจริง"
+      },
+      {
+        "id": "shalapao",
+        "tag": "oss",
+        "stack": [
+          "Hono",
+          "Cloudflare Workers",
+          "D1",
+          "Vitest"
+        ],
+        "links": {
+          "code": "https://github.com/nattawai/Shalapao"
+        },
+        "title": "Shalapao",
+        "desc": "แอปกระเป๋าเงินหลายใบบน LINE แบ่งเงินเป็นซอง บันทึกรายรับรายจ่าย และกระทบยอดให้ตรงกับธนาคาร"
+      },
+      {
+        "id": "finance-risk",
+        "tag": "enterprise",
+        "stack": [
+          "Web App",
+          "REST API",
+          "SQL"
+        ],
+        "links": {},
+        "title": "ระบบการเงินและบริหารความเสี่ยง",
+        "desc": "ระบบการเงิน ระบบบริหารความเสี่ยง และระบบควบคุมภายในสำหรับมหาวิทยาลัย ที่ข้อมูลต้องถูกต้องและตรวจสอบย้อนหลังได้"
+      },
+      {
+        "id": "workflow",
+        "tag": "enterprise",
+        "stack": [
+          "ERP API",
+          "Nintex K2",
+          "DocuSign"
+        ],
+        "links": {},
+        "title": "Workflow และ E-Signature",
+        "desc": "API เชื่อมระบบ ERP กับ Nintex K2 พัฒนา workflow บน Nintex Workflow Cloud และเชื่อมต่อ DocuSign เพื่อเซ็นเอกสารออนไลน์"
+      }
+    ]
+  },
+  "experience": {
+    "title": "ทักษะและประสบการณ์",
+    "lead": "เครื่องมือที่ใช้ และเส้นทางที่ผ่านมา",
+    "skillsTitle": "ทักษะ",
+    "timelineTitle": "ประสบการณ์ทำงาน",
+    "eduTitle": "การศึกษา",
+    "skills": [
+      {
+        "group": "ภาษาโปรแกรม",
+        "items": [
+          "TypeScript",
+          "JavaScript",
+          "C#",
+          "Dart",
+          "PHP"
+        ]
+      },
+      {
+        "group": "Frontend",
+        "items": [
+          "React",
+          "Next.js",
+          "Tailwind CSS",
+          "Ant Design"
+        ]
+      },
+      {
+        "group": "Backend",
+        "items": [
+          "Node.js",
+          "ASP.NET",
+          "Hono",
+          "REST API"
+        ]
+      },
+      {
+        "group": "Mobile",
+        "items": [
+          "Flutter",
+          "iOS (Objective-C)",
+          "Android (Java)"
+        ]
+      },
+      {
+        "group": "Database",
+        "items": [
+          "PostgreSQL",
+          "MySQL",
+          "SQL Server",
+          "Cloudflare D1"
+        ]
+      },
+      {
+        "group": "Integration & AI",
+        "items": [
+          "Nintex K2 / Workflow Cloud",
+          "DocuSign",
+          "ERP API",
+          "Claude Code (Agents, Plugins, Hooks)"
+        ]
+      }
+    ],
+    "jobs": [
+      {
+        "years": "2569 – ปัจจุบัน",
+        "role": "Senior Developer",
+        "company": "Gabriel & Lim Co., Ltd.",
+        "points": [
+          "พัฒนาแพลตฟอร์มสุขภาพ (Health Platform) ให้หน่วยงานด้านสถานพยาบาลของรัฐวิสาหกิจ"
+        ]
+      },
+      {
+        "years": "2565 – 2569",
+        "role": "Senior Developer",
+        "company": "บริษัท จีพีเอ็ม โกลบอล จำกัด",
+        "points": [
+          "พัฒนาระบบการเงิน แผนงานโครงการ HR บริหารความเสี่ยง และควบคุมภายใน ให้มหาวิทยาลัยรัฐ",
+          "พัฒนาเว็บบริหารทรัพย์สินและกีฬา แอปมือถือของมหาวิทยาลัย และงาน Nintex Automation Cloud + DocuSign ให้มหาวิทยาลัยรัฐ",
+          "ทำ product research และเป็น technical consultant"
+        ]
+      },
+      {
+        "years": "2562 – 2565",
+        "role": "Software Engineer",
+        "company": "บริษัท วี เชฟ (ประเทศไทย) จำกัด",
+        "points": [
+          "ออกแบบและพัฒนาเว็บไซต์ด้วย JavaScript และ PHP",
+          "พัฒนา back-end service ด้วย Node.js รวมถึงเว็บจองพื้นที่ Food Truck"
+        ]
+      },
+      {
+        "years": "2560 – 2561",
+        "role": "Software Engineer",
+        "company": "บริษัท คอมพิวเตอร์ เทเลโฟนี เอเซีย จำกัด",
+        "points": [
+          "พัฒนาเว็บด้วย JavaScript",
+          "พัฒนาแอป iOS (Objective-C) และ Android (Java)"
+        ]
+      }
+    ],
+    "education": {
+      "year": "2557",
+      "degree": "วิทยาศาสตรบัณฑิต (เทคโนโลยีสารสนเทศ)",
+      "school": "สถาบันเทคโนโลยีไทย-ญี่ปุ่น"
+    },
+    "other": {
+      "title": "งานอื่น",
+      "years": "2560 – 2561",
+      "role": "Passenger Service Agent",
+      "company": "บริษัท บริการภาคพื้นการบินกรุงเทพเวิลด์ไวด์ไฟลท์เซอร์วิส จำกัด",
+      "points": [
+        "บริการผู้โดยสารที่ท่าอากาศยานสุวรรณภูมิ",
+        "จัดทำรายงานเที่ยวบิน"
+      ]
+    }
+  },
+  "contact": {
+    "title": "ติดต่อ",
+    "lead": "มาคุยกันครับ",
+    "body": "เปิดรับโอกาสงานใหม่ ทั้งงานประจำและงานโปรเจกต์ ส่งอีเมลหรือทักทาง LinkedIn ได้เลยครับ",
+    "email": "wai.natthasak@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/natthasak-w",
+    "github": [
+      "https://github.com/natthasak-w",
+      "https://github.com/nattawai"
+    ],
+    "emailLabel": "ส่งอีเมล",
+    "resume": "ดาวน์โหลด Resume",
+    "footer": "ออกแบบและพัฒนาโดยณัฐศักดิ์ · สร้างด้วย React และ web-studio"
+  }
+}

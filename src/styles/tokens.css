@@ -1,0 +1,28 @@
+/* Design tokens — Soft Studio. แหล่งความจริงเดียว: docs/design.md */
+:root {
+  --bg: #faf6f1;
+  --surface: #ffffff;
+  --ink: #3a332d;
+  --ink-soft: #6b625a;
+  --sage: #8fa68a;      /* ตกแต่งเท่านั้น ห้ามใช้เป็นตัวหนังสือ */
+  --sage-ink: #5b7556;  /* ลิงก์ / ป้ายกำกับ */
+  --clay: #d49266;      /* ปุ่มหลัก / จุดเน้น (ตัวหนังสือบนปุ่มใช้ --ink) */
+
+  --radius-card: 1.25rem;
+  --shadow-soft: 0 10px 30px -12px rgb(58 51 45 / 0.18);
+}
+
+/* ให้ Tailwind v4 สร้าง utility จาก token: bg-bg, text-ink, bg-clay ... */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-sage: var(--sage);
+  --color-sage-ink: var(--sage-ink);
+  --color-clay: var(--clay);
+
+  --font-sans: "Manrope", "Anuphan", ui-sans-serif, system-ui, sans-serif;
+  --radius-card: var(--radius-card);
+  --shadow-soft: var(--shadow-soft);
+}

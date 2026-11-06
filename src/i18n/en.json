@@ -1,0 +1,273 @@
+{
+  "nav": {
+    "brand": "Natthasak W.",
+    "projects": "Projects",
+    "experience": "Experience",
+    "contact": "Contact",
+    "resume": "Resume"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "firstName": "Natthasak",
+    "lastName": "Wiwatwisawakorn",
+    "role": "Senior Full-Stack Developer",
+    "focus": "Backend-focused, bringing AI into real systems",
+    "tagline": "I build systems where data has to be right — finance, risk control management and HR.",
+    "domains": [
+      "Finance systems",
+      "Risk Control Management",
+      "HR systems",
+      "AI integration"
+    ],
+    "domainsLabel": "Domains",
+    "photoAlt": "Profile photo of Natthasak",
+    "ctaProjects": "View projects",
+    "ctaContact": "Contact"
+  },
+  "about": {
+    "title": "About",
+    "lead": "9 years building systems where data has to be right",
+    "body": [
+      "For 9+ years I have built systems for government agencies, universities and private companies — mostly where accuracy and auditability matter: finance, risk management, internal control, project planning and HR.",
+      "I start by understanding how people actually work, then design systems that are easy to maintain and connect cleanly to what an organisation already runs, such as ERP, workflow engines and e-signature."
+    ],
+    "stats": [
+      {
+        "value": "9+",
+        "label": "Years of experience"
+      },
+      {
+        "value": "12",
+        "label": "Systems delivered"
+      },
+      {
+        "value": "3",
+        "label": "Platforms: Web · Mobile · API"
+      }
+    ]
+  },
+  "projects": {
+    "title": "Selected projects",
+    "lead": "A selection of AI work, live products and enterprise systems.",
+    "tags": {
+      "ai": "AI",
+      "live": "Live",
+      "oss": "Open source",
+      "enterprise": "Enterprise"
+    },
+    "demo": "Live site",
+    "code": "Code",
+    "private": "Internal system — not public",
+    "items": [
+      {
+        "id": "ai-office",
+        "tag": "ai",
+        "stack": [
+          "Node.js",
+          "Claude Code Hooks",
+          "Pixel Art"
+        ],
+        "links": {},
+        "title": "AI Virtual Office",
+        "desc": "A pixel-art virtual office that shows real AI agents (Claude Code) at work in real time, driven by hooks that stream events from every session."
+      },
+      {
+        "id": "web-studio",
+        "tag": "ai",
+        "stack": [
+          "Claude Code",
+          "Skills",
+          "Subagents"
+        ],
+        "links": {
+          "code": "https://github.com/nattawai/web-studio"
+        },
+        "title": "web-studio — Claude Code Plugin",
+        "desc": "A Claude Code plugin that runs an end-to-end web workflow from brief to deploy, picks the right framework per project and pauses for approval. This site was built with it."
+      },
+      {
+        "id": "ts-planner",
+        "tag": "live",
+        "stack": [
+          "JavaScript",
+          "Python",
+          "Data extraction"
+        ],
+        "links": {
+          "demo": "https://ts-planner.waivern.org"
+        },
+        "title": "TS Classic Planner",
+        "desc": "A skill, stat, EXP and map planner for TS Online Classic, used by real players."
+      },
+      {
+        "id": "shalapao",
+        "tag": "oss",
+        "stack": [
+          "Hono",
+          "Cloudflare Workers",
+          "D1",
+          "Vitest"
+        ],
+        "links": {
+          "code": "https://github.com/nattawai/Shalapao"
+        },
+        "title": "Shalapao",
+        "desc": "A multi-wallet app on LINE: split money into envelopes, track income and spending, and reconcile with the bank."
+      },
+      {
+        "id": "finance-risk",
+        "tag": "enterprise",
+        "stack": [
+          "Web App",
+          "REST API",
+          "SQL"
+        ],
+        "links": {},
+        "title": "Finance & Risk Management",
+        "desc": "Finance, risk management and internal control systems for a university, where data must be accurate and auditable."
+      },
+      {
+        "id": "workflow",
+        "tag": "enterprise",
+        "stack": [
+          "ERP API",
+          "Nintex K2",
+          "DocuSign"
+        ],
+        "links": {},
+        "title": "Workflow & E-Signature",
+        "desc": "APIs connecting ERP to Nintex K2, workflows on Nintex Workflow Cloud, and a DocuSign integration for online signing."
+      }
+    ]
+  },
+  "experience": {
+    "title": "Skills & experience",
+    "lead": "The tools I use and the road so far",
+    "skillsTitle": "Skills",
+    "timelineTitle": "Work experience",
+    "eduTitle": "Education",
+    "skills": [
+      {
+        "group": "Languages",
+        "items": [
+          "TypeScript",
+          "JavaScript",
+          "C#",
+          "Dart",
+          "PHP"
+        ]
+      },
+      {
+        "group": "Frontend",
+        "items": [
+          "React",
+          "Next.js",
+          "Tailwind CSS",
+          "Ant Design"
+        ]
+      },
+      {
+        "group": "Backend",
+        "items": [
+          "Node.js",
+          "ASP.NET",
+          "Hono",
+          "REST API"
+        ]
+      },
+      {
+        "group": "Mobile",
+        "items": [
+          "Flutter",
+          "iOS (Objective-C)",
+          "Android (Java)"
+        ]
+      },
+      {
+        "group": "Database",
+        "items": [
+          "PostgreSQL",
+          "MySQL",
+          "SQL Server",
+          "Cloudflare D1"
+        ]
+      },
+      {
+        "group": "Integration & AI",
+        "items": [
+          "Nintex K2 / Workflow Cloud",
+          "DocuSign",
+          "ERP API",
+          "Claude Code (Agents, Plugins, Hooks)"
+        ]
+      }
+    ],
+    "jobs": [
+      {
+        "years": "2026 – Present",
+        "role": "Senior Developer",
+        "company": "Gabriel & Lim Co., Ltd.",
+        "points": [
+          "Building a health platform for the medical services division of a state enterprise"
+        ]
+      },
+      {
+        "years": "2022 – 2026",
+        "role": "Senior Developer",
+        "company": "GPM Global Co., Ltd.",
+        "points": [
+          "Built finance, project planning, HR, risk management and internal control systems for a public university",
+          "Built a property & sports management site, a campus mobile app, and Nintex Automation Cloud + DocuSign integrations for a public university",
+          "Product research and technical consulting"
+        ]
+      },
+      {
+        "years": "2019 – 2022",
+        "role": "Software Engineer",
+        "company": "We Chef (Thailand) Co., Ltd.",
+        "points": [
+          "Designed and built websites with JavaScript and PHP",
+          "Built Node.js back-end services, including a food-truck space booking web app"
+        ]
+      },
+      {
+        "years": "2017 – 2018",
+        "role": "Software Engineer",
+        "company": "Computer Telephony Asia Co., Ltd.",
+        "points": [
+          "Web development with JavaScript",
+          "Native app development for iOS (Objective-C) and Android (Java)"
+        ]
+      }
+    ],
+    "education": {
+      "year": "2014",
+      "degree": "B.Sc. Information Technology",
+      "school": "Thai-Nichi Institute of Technology"
+    },
+    "other": {
+      "title": "Other work",
+      "years": "2017 – 2018",
+      "role": "Passenger Service Agent",
+      "company": "Bangkok Flight Services Co., Ltd.",
+      "points": [
+        "Served passengers at Suvarnabhumi Airport",
+        "Prepared flight reports"
+      ]
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "lead": "Let's talk",
+    "body": "Open to new roles and project work. Email me or say hi on LinkedIn.",
+    "email": "wai.natthasak@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/natthasak-w",
+    "github": [
+      "https://github.com/natthasak-w",
+      "https://github.com/nattawai"
+    ],
+    "emailLabel": "Email me",
+    "resume": "Download resume",
+    "footer": "Designed and built by Natthasak · Made with React and web-studio"
+  }
+}
