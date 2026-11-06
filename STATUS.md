@@ -44,7 +44,7 @@ workflow: `web-studio` plugin (`E:\Workspace\Claude Plugins\web-studio`)
 | 2026-11-07 | ย้ายไป Pages `nattawai-portfolio` (Git) — `natthasak-portfolio` (Direct Upload) เลิกใช้ | Direct Upload เปลี่ยนเป็น Git ไม่ได้ |
 
 | 2026-11-07 | **ห้ามระบุชื่อลูกค้า/หน่วยงาน** (รัฐวิสาหกิจ, มหาวิทยาลัย) ทั้งในเว็บ, repo และภาพ — ใช้คำกลาง ๆ เช่น "รัฐวิสาหกิจ", "มหาวิทยาลัยรัฐ"; ห้ามใช้ชื่อแอปที่ชี้ตัวลูกค้า | ผู้ใช้แจ้ง: ข้อมูลลับ เปิดเผยไม่ได้ |
-| 2026-11-07 | ล้าง git history เป็น commit เดียว (force push), ลบ Pages `natthasak-portfolio` และ deployment เก่าทั้งหมด | เวอร์ชันเก่ามีชื่อลูกค้า — ลบ repo เก่าแล้วสร้าง `nattawai/portfolio` ใหม่ (id 1448639097) — commit เก่า 404 แล้ว ✅ |
+| 2026-11-07 | ล้าง git history เป็น commit เดียว (force push), ลบ Pages `natthasak-portfolio` และ deployment เก่าทั้งหมด | เวอร์ชันเก่ามีชื่อลูกค้า — ลบ repo เก่าแล้วสร้าง `nattawai/portfolio` ใหม่ (id 1448639097) — commit เก่า 404 แล้ว ✅; สร้าง Pages `nattawai-portfolio` ใหม่ผูก repo ใหม่ + โดเมนเดิม |
 ## Deploy
 push เข้า `main` → Cloudflare build (`npm run build`, output `dist`) และ deploy เอง
 gh ในเครื่อง active = natthasak-w ต้องสลับก่อน push:
