@@ -9,7 +9,7 @@ const sub = 'font-mono text-xs font-medium uppercase text-sage-ink [html:lang(en
 export function Experience() {
   const { t } = useTranslation()
   const jobs = t('experience.jobs', { returnObjects: true }) as Job[]
-  const edu = t('experience.education', { returnObjects: true }) as Edu
+  const edu = t('experience.education', { returnObjects: true }) as Edu[]
   const other = t('experience.other', { returnObjects: true }) as Job & { title: string }
 
   return (
@@ -45,12 +45,18 @@ export function Experience() {
           <p className="text-sm text-ink-soft">{other.company}</p>
         </div>
         <div data-reveal className="rounded-card bg-surface p-5">
-          <p className={sub}>{t('experience.eduTitle')} · {edu.year}</p>
-          <p className="mt-2 font-bold">{edu.degree}</p>
-          <p className="text-sm text-ink-soft">{edu.school}</p>
+          <p className={sub}>{t('experience.eduTitle')}</p>
+          <ul className="mt-3 space-y-4">
+            {edu.map((e) => (
+              <li key={e.school}>
+                <p className="font-mono text-xs text-ink-soft">{e.year}</p>
+                <p className="mt-0.5 font-bold leading-snug">{e.school}</p>
+                <p className="text-sm text-ink-soft">{e.degree}</p>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
-
     </Section>
   )
 }

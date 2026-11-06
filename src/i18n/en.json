@@ -176,11 +176,18 @@
         ]
       }
     ],
-    "education": {
-      "year": "2014",
-      "degree": "B.Sc. Information Technology",
-      "school": "Thai-Nichi Institute of Technology"
-    },
+    "education": [
+      {
+        "year": "2010 – 2014",
+        "degree": "B.Sc. Information Technology",
+        "school": "Thai-Nichi Institute of Technology"
+      },
+      {
+        "year": "1998 – 2009",
+        "degree": "Grades 1–12 · Arts-Mathematics track",
+        "school": "Bangkok Christian College"
+      }
+    ],
     "other": {
       "title": "Other work",
       "years": "2017 – 2018",
