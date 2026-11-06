@@ -66,18 +66,6 @@
     "private": "Internal system — not public",
     "items": [
       {
-        "id": "ai-office",
-        "tag": "ai",
-        "stack": [
-          "Node.js",
-          "Claude Code Hooks",
-          "Pixel Art"
-        ],
-        "links": {},
-        "title": "AI Virtual Office",
-        "desc": "A pixel-art virtual office that shows real AI agents (Claude Code) at work in real time, driven by hooks that stream events from every session."
-      },
-      {
         "id": "web-studio",
         "tag": "ai",
         "stack": [

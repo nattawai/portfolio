@@ -1,3 +1,4 @@
+import type { CSSProperties } from 'react'
 import { useTranslation } from 'react-i18next'
 import {
   siAndroid,
@@ -64,6 +65,40 @@ function isDark(hex: string) {
   return l < 40
 }
 
+// ลูกเล่นตอน hover ของแต่ละ skill — keyframes อยู่ใน global.css (.fx-*)
+const FX: Record<string, string> = {
+  React: 'fx-orbit', // อะตอมหมุน
+  'Next.js': 'fx-dash', // พุ่งไปข้างหน้า
+  TypeScript: 'fx-type', // กระพริบเหมือนเคอร์เซอร์
+  JavaScript: 'fx-type',
+  'C#': 'fx-flip',
+  'ASP.NET': 'fx-flip',
+  'Tailwind CSS': 'fx-wave', // ลมพัด
+  'Ant Design': 'fx-march', // มดเดิน
+  'Node.js': 'fx-pulse', // หกเหลี่ยมเต้น
+  Hono: 'fx-flame', // เปลวไฟ
+  PostgreSQL: 'fx-stack', // ฐานข้อมูลยุบ-เด้ง
+  MySQL: 'fx-stack',
+  'SQL Server': 'fx-stack',
+  'Cloudflare D1': 'fx-stack',
+  'Cloudflare Workers': 'fx-drift', // เมฆลอย
+  Flutter: 'fx-flutter', // กระพือปีก
+  Dart: 'fx-dart', // ปาลูกดอก
+  'Claude Code': 'fx-spark', // ประกายหมุน
+  'Agent Skills & Plugins': 'fx-spark',
+  'Hooks & Subagents': 'fx-spark',
+  'Model Context Protocol (MCP)': 'fx-link', // ข้อต่อหมุน
+  GSAP: 'fx-elastic', // easing ยืดหยุ่น
+  Vitest: 'fx-pass', // เทสผ่าน เด้ง
+  PHP: 'fx-wobble',
+  'iOS (Objective-C)': 'fx-tilt',
+  'Android (Java)': 'fx-hop',
+  'Nintex K2 / Workflow Cloud': 'fx-dash', // งานไหลต่อ
+  DocuSign: 'fx-draw', // เขียนลายเซ็น
+  'ERP API': 'fx-shake',
+  'REST API': 'fx-shake',
+}
+
 // ทักษะที่ไม่มีโลโก้แบรนด์ → ไอคอนเส้นทั่วไป
 const GENERIC: Record<string, string> = {
   api: 'M8 9l-4 3 4 3M16 9l4 3-4 3M13.5 6l-3 12',
@@ -82,7 +117,7 @@ function SkillIcon({ name, focus }: { name: string; focus?: boolean }) {
       <svg
         aria-hidden
         viewBox="0 0 24 24"
-        className="size-3.5 shrink-0"
+        className={`size-3.5 shrink-0 ${FX[name] ?? 'fx-pop'}`}
         // สีแบรนด์เป็นข้อมูลของโลโก้ ไม่ใช่สีของธีม
         style={{ fill: isDark(brand.hex) ? 'currentColor' : `#${brand.hex}` }}
       >
@@ -91,7 +126,7 @@ function SkillIcon({ name, focus }: { name: string; focus?: boolean }) {
     )
   }
   return (
-    <svg aria-hidden viewBox="0 0 24 24" className="size-3.5 shrink-0 text-sage-ink" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg aria-hidden viewBox="0 0 24 24" className={`size-3.5 shrink-0 text-sage-ink ${focus ? 'fx-orbit' : (FX[name] ?? 'fx-pop')}`} fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d={focus ? GENERIC.focus : genericFor(name)} />
     </svg>
   )
@@ -111,7 +146,9 @@ export function Skills() {
               {g.items.map((s) => (
                 <li
                   key={s}
-                  className="flex items-center gap-1.5 rounded-md border border-sage-ink/25 bg-sage-ink/10 px-3 py-[5px] text-[13px] font-medium text-ink"
+                  // --brand: ย้อมขอบ/พื้นตอน hover ด้วยสีแบรนด์ (โลโก้สีเข้ม → สีเน้นของธีม)
+                  style={{ '--brand': BRAND[s] && !isDark(BRAND[s].hex) ? `#${BRAND[s].hex}` : 'var(--sage-ink)' } as CSSProperties}
+                  className="skill flex cursor-default items-center gap-1.5 rounded-md border border-sage-ink/25 bg-sage-ink/10 px-3 py-[5px] text-[13px] font-medium text-ink"
                 >
                   <SkillIcon name={s} focus={g.focus} />
                   {s}

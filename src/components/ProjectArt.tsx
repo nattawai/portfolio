@@ -4,39 +4,6 @@
  */
 const Bg = () => <rect width="320" height="200" className="fill-surface-2" />
 
-function AiOffice() {
-  // ห้อง pixel art: พื้นตาราง + โต๊ะ 3 ตัว + agent + ฟองคำพูด
-  const desks = [
-    { x: 40, y: 92 },
-    { x: 140, y: 92 },
-    { x: 240, y: 92 },
-  ]
-  return (
-    <>
-      <Bg />
-      <rect y="140" width="320" height="60" className="fill-ink/10" />
-      {Array.from({ length: 16 }, (_, i) => (
-        <rect key={i} x={i * 20} y="140" width="10" height="60" className="fill-ink/5" />
-      ))}
-      <rect x="20" y="20" width="60" height="36" className="fill-sage/40" />
-      <rect x="240" y="20" width="60" height="36" className="fill-clay/35" />
-      {desks.map((d, i) => (
-        <g key={i}>
-          <rect x={d.x} y={d.y + 28} width="44" height="10" className="fill-ink/30" />
-          <rect x={d.x + 6} y={d.y + 6} width="32" height="22" className="fill-ink/45" />
-          <rect x={d.x + 9} y={d.y + 9} width="26" height="16" className={i === 1 ? 'fill-clay' : 'fill-sage'} />
-          <rect x={d.x + 14} y={d.y + 44} width="16" height="16" className="fill-ink/70" />
-          <rect x={d.x + 16} y={d.y + 38} width="12" height="8" className="fill-clay/80" />
-        </g>
-      ))}
-      <rect x="150" y="62" width="34" height="18" className="fill-ink/80" />
-      <rect x="156" y="68" width="6" height="6" className="fill-surface-2" />
-      <rect x="166" y="68" width="6" height="6" className="fill-surface-2" />
-      <rect x="176" y="68" width="4" height="6" className="fill-surface-2" />
-    </>
-  )
-}
-
 function WebStudio() {
   // pipeline: brief → direction → build → qa → deploy
   const steps = [30, 92, 154, 216, 278]
@@ -156,7 +123,6 @@ function Workflow() {
 }
 
 const ART: Record<string, () => React.JSX.Element> = {
-  'ai-office': AiOffice,
   'web-studio': WebStudio,
   'ts-planner': TsPlanner,
   shalapao: Shalapao,
@@ -164,7 +130,16 @@ const ART: Record<string, () => React.JSX.Element> = {
   workflow: Workflow,
 }
 
+// งานที่มีหน้าจอจริงและเปิดสาธารณะ → ใช้ภาพแคปจริง (1280×800 webp ใน public/projects)
+const SCREEN: Record<string, string> = {
+  'ts-planner': '/projects/ts-planner.webp',
+}
+
 export function ProjectArt({ id, className }: { id: string; className?: string }) {
+  const src = SCREEN[id]
+  if (src) {
+    return <img src={src} alt="" width={1280} height={800} loading="lazy" decoding="async" className={`${className ?? ''} object-cover object-top`} />
+  }
   const Art = ART[id] ?? WebStudio
   return (
     <svg aria-hidden viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" className={className}>

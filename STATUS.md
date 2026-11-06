@@ -49,6 +49,10 @@ workflow: `web-studio` plugin (`E:\Workspace\Claude Plugins\web-studio`)
 | 2026-11-07 | ภาพในจอ Projects เป็น SVG นามธรรม (`ProjectArt.tsx`) ทุกงาน | ห้ามใช้ภาพหน้าจอระบบลูกค้า |
 | 2026-11-07 | Skills แยกเป็น section แบบ faseeh: ใช้อยู่ / กำลังทดลอง / เคยใช้ / งานที่ถนัด + ไอคอน simple-icons (CC0) | ผู้ใช้ขอให้เหมือน faseeh; การจัดกลุ่มอนุมานจาก timeline — ให้ผู้ใช้ตรวจ |
 | 2026-11-07 | ไม่ใส่ reveal animation ให้ข้อความ Hero/About ส่วนบน | reveal ทำให้ LCP mobile 3.3s (perf 87) → เอาออกแล้ว 1.9s (perf 96–97) |
+| 2026-11-07 | เอา AI Virtual Office ออกจาก Projects | ผู้ใช้แจ้ง: ระบบล้มแล้ว ไม่มีประโยชน์ใช้งานจริง |
+| 2026-11-07 | TS Classic Planner ใช้ภาพแคปจริง `public/projects/ts-planner.webp` (1280×800) งานอื่นยังเป็น SVG นามธรรม | มีแค่งานนี้ที่มีหน้าจอสาธารณะ; เพิ่มภาพงานอื่นได้ที่ `SCREEN` ใน `ProjectArt.tsx` |
+| 2026-11-07 | Skills: hover แต่ละตัวมีลูกเล่นเฉพาะ (คลาส `fx-*` ใน global.css) + ย้อมสีแบรนด์ | ผู้ใช้ขอ; ปิดเมื่อ reduced-motion |
+| 2026-11-07 | การศึกษา ม.ปลาย ยังไม่ได้ใส่ | ไม่มีข้อมูลในโปรเจกต์ — รอผู้ใช้ให้ชื่อโรงเรียน/ปี/สาย |
 ## Deploy
 push เข้า `main` → Cloudflare build (`npm run build`, output `dist`) และ deploy เอง
 gh ในเครื่อง active = natthasak-w ต้องสลับก่อน push:
