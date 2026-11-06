@@ -4,7 +4,7 @@ import { Section } from '../components/Section'
 import { Monitor, ProjectArt } from '../components/ProjectArt'
 import { ArrowUpRight } from '../components/Icons'
 
-type Tag = 'ai' | 'live' | 'oss' | 'enterprise'
+type Tag = 'ai' | 'live' | 'oss' | 'enterprise' | 'desktop'
 type Project = {
   id: string
   tag: Tag

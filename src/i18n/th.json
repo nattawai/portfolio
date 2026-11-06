@@ -59,7 +59,8 @@
       "ai": "AI",
       "live": "ใช้งานจริง",
       "oss": "Open source",
-      "enterprise": "ระบบองค์กร"
+      "enterprise": "ระบบองค์กร",
+      "desktop": "แอปเดสก์ท็อป"
     },
     "demo": "ดูเว็บ",
     "code": "ดูโค้ด",
@@ -94,6 +95,23 @@
         "desc": "เว็บวางแผนสกิล สเตตัส EXP และแผนที่สำหรับเกม TS Online Classic มีผู้เล่นใช้งานจริง"
       },
       {
+        "id": "waivern",
+        "tag": "live",
+        "stack": [
+          "React",
+          "TypeScript",
+          "Hono",
+          "Drizzle",
+          "Cloudflare",
+          "SSE"
+        ],
+        "links": {
+          "demo": "https://waivern.org"
+        },
+        "title": "waivern.org",
+        "desc": "แพลตฟอร์มส่วนตัว: ราคาน้ำมันอัปเดตทุกวันพร้อมกราฟย้อนหลัง, Todo มีปฏิทิน ลากวางเรียงงาน และแจ้งเตือนแบบ real-time, ระบบล็อกอินแยกสิทธิ์"
+      },
+      {
         "id": "shalapao",
         "tag": "oss",
         "stack": [
@@ -107,6 +125,20 @@
         },
         "title": "Shalapao",
         "desc": "แอปกระเป๋าเงินหลายใบบน LINE แบ่งเงินเป็นซอง บันทึกรายรับรายจ่าย และกระทบยอดให้ตรงกับธนาคาร"
+      },
+      {
+        "id": "shalam-console",
+        "tag": "desktop",
+        "stack": [
+          "Tauri v2",
+          "Rust",
+          "JavaScript",
+          "OBS WebSocket",
+          "Twitch EventSub"
+        ],
+        "links": {},
+        "title": "Shalam Console",
+        "desc": "แอปเดสก์ท็อปสำหรับสตรีมเมอร์ Twitch รวมแชท อีเวนต์ แต้มช่อง บอท overlay และสั่งงาน OBS ไว้ในหน้าจอเดียว ทำงานบนเครื่อง ไม่พึ่งเซิร์ฟเวอร์"
       },
       {
         "id": "finance-risk",

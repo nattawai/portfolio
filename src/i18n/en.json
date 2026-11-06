@@ -59,7 +59,8 @@
       "ai": "AI",
       "live": "Live",
       "oss": "Open source",
-      "enterprise": "Enterprise"
+      "enterprise": "Enterprise",
+      "desktop": "Desktop app"
     },
     "demo": "Live site",
     "code": "Code",
@@ -94,6 +95,23 @@
         "desc": "A skill, stat, EXP and map planner for TS Online Classic, used by real players."
       },
       {
+        "id": "waivern",
+        "tag": "live",
+        "stack": [
+          "React",
+          "TypeScript",
+          "Hono",
+          "Drizzle",
+          "Cloudflare",
+          "SSE"
+        ],
+        "links": {
+          "demo": "https://waivern.org"
+        },
+        "title": "waivern.org",
+        "desc": "A personal platform: daily fuel prices with history charts, a todo app with calendar, drag-and-drop and real-time reminders, and role-based login."
+      },
+      {
         "id": "shalapao",
         "tag": "oss",
         "stack": [
@@ -107,6 +125,20 @@
         },
         "title": "Shalapao",
         "desc": "A multi-wallet app on LINE: split money into envelopes, track income and spending, and reconcile with the bank."
+      },
+      {
+        "id": "shalam-console",
+        "tag": "desktop",
+        "stack": [
+          "Tauri v2",
+          "Rust",
+          "JavaScript",
+          "OBS WebSocket",
+          "Twitch EventSub"
+        ],
+        "links": {},
+        "title": "Shalam Console",
+        "desc": "A desktop app for Twitch streamers that puts chat, events, channel points, bots, overlays and OBS control on one screen. Runs locally, no server needed."
       },
       {
         "id": "finance-risk",

@@ -133,6 +133,11 @@ const ART: Record<string, () => React.JSX.Element> = {
 // งานที่มีหน้าจอจริงและเปิดสาธารณะ → ใช้ภาพแคปจริง (1280×800 webp ใน public/projects)
 const SCREEN: Record<string, string> = {
   'ts-planner': '/projects/ts-planner.webp',
+  waivern: '/projects/waivern.webp',
+  // แคปจากหน้าเว็บจริงบนเครื่อง ป้อนข้อมูลตัวอย่าง (ไม่ใช่เงินจริง)
+  shalapao: '/projects/shalapao.webp',
+  // ภาพ hi-fi ที่อนุมัติแล้ว (แอปเรนเดอร์ตรงกัน) · ชื่อผู้ใช้ในภาพเป็นข้อมูลตัวอย่าง
+  'shalam-console': '/projects/shalam-console.webp',
 }
 
 export function ProjectArt({ id, className }: { id: string; className?: string }) {
