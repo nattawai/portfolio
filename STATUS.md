@@ -32,7 +32,7 @@ workflow: `web-studio` plugin (`E:\Workspace\Claude Plugins\web-studio`)
 | 2026-11-07 | Skills + Experience จาก CV: 6 กลุ่มทักษะ, 3 ตำแหน่งงาน (2560–ปัจจุบัน), การศึกษา TNI 2557 | TH แสดงปี พ.ศ., EN แสดงปี ค.ศ.; Passenger Service Agent ใส่เป็นการ์ด "งานอื่น" แยกจาก timeline (ผู้ใช้ขอ 2026-11-07) |
 | 2026-11-07 | ชื่อบริษัท EN: We Chef (ไม่ใช่ V Chef) ตามผู้ใช้ |  |
 | 2026-11-07 | Timeline แก้ตามผู้ใช้: 2569–ปัจจุบัน Gabriel & Lim (Health Platform), 2565–2569 GPM | CV เดิมระบุ Bay Computing ซึ่งไม่ตรง; ชื่อเต็ม: GPM Global Co., Ltd. / บริษัท จีพีเอ็ม โกลบอล จำกัด (ยืนยันแล้ว) |
-| 2026-11-07 | Contact: อีเมล wai.natthasak@gmail.com, LinkedIn natthasak-w, GitHub ทั้ง natthasak-w และ nattawai | ผู้ใช้พิมพ์ "gmaill.com" — แก้เป็น gmail.com (ผู้ใช้ยืนยันแล้ว) |
+| 2026-11-07 | Contact: อีเมล natthasak.w@waivern.org, LinkedIn natthasak-w, GitHub ทั้ง natthasak-w และ nattawai | เดิมใช้ Gmail ส่วนตัว — ผู้ใช้ขอเปลี่ยนเป็นอีเมลโดเมน waivern.org |
 | 2026-11-07 | ปุ่ม Resume ซ่อนไว้ (`HAS_RESUME = false` ใน Contact.tsx) | รอไฟล์ `public/resume.pdf` |
 | 2026-11-07 | Motion รวมไว้ hook เดียว `useMotion()` เรียกใน App.tsx, อ่าน data-* จาก markup | section ไม่ต้องรู้เรื่อง animation; ปิดทั้งหมดเมื่อ reduced-motion |
 | 2026-11-07 | ScrollTrigger.refresh เมื่อความสูง body เปลี่ยน (ResizeObserver) | สลับภาษา/ฟอนต์/รูปโหลดทำให้ตำแหน่ง trigger เพี้ยน — reveal ด้านล่างค้าง opacity 0 |
