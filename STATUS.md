@@ -58,6 +58,7 @@ workflow: `web-studio` plugin (`E:\Workspace\Claude Plugins\web-studio`)
 | 2026-11-07 | We Chef: ประสบการณ์ 6 ข้อ (อีเวนต์ Food Truck, เว็บไซต์, UX/UI Figma, ระบบสั่งอาหาร+ตู้ QR, Node.js, Wi-Fi login) + ผลงาน `wechef` ภาพรวมเว็บไซต์จริงกับดีไซน์ Lunchbox จาก Figma (ข้อมูลในดีไซน์เป็นตัวอย่าง) | ผู้ใช้ให้ข้อมูล; ไม่ใช้ไฟล์ Figma ที่มีชื่อหน่วยงานรัฐ (Depa/EEC) |
 | 2026-11-07 | ฟอนต์: หัวข้อ Manrope (คลาส `font-heading`), เนื้อหา IBM Plex Sans Thai (ไทย+อังกฤษ), technical JetBrains Mono · เลิกใช้ Anuphan | ผู้ใช้เลือก; Lighthouse perf 95 |
 | 2026-11-07 | ภาพจริงในจอเพิ่ม: waivern (แคปหน้า /oil สาธารณะ), Shalapao (เปิดหน้าเว็บบนเครื่องแล้วป้อนข้อมูลตัวอย่าง — ไม่ใช่เงินจริง, เว็บจริงต้องล็อกอิน LINE), Shalam Console (ภาพ hi-fi ที่อนุมัติแล้วใน repo, ชื่อผู้ใช้เป็นตัวอย่าง) | ผู้ใช้ขอให้แคปงานที่มีหน้าจอ; web-studio เป็น plugin ไม่มีหน้าจอ จึงยังเป็น SVG |
+| 2026-11-07 | ผลงานใหม่ `mail-discord-bot` (tag oss, repo สาธารณะ): บอท Discord แจ้งเตือน Gmail/Outlook หลายบัญชี บน Cloudflare Workers · ภาพเป็น SVG นามธรรม `MailBot` | ผู้ใช้ขอเพิ่ม; ไม่แคป Discord จริงเพราะมีอีเมลจริง |
 ## Deploy
 push เข้า `main` → Cloudflare build (`npm run build`, output `dist`) และ deploy เอง
 gh ในเครื่อง active = natthasak-w ต้องสลับก่อน push:

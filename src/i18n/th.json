@@ -127,6 +127,22 @@
         "desc": "แอปกระเป๋าเงินหลายใบบน LINE แบ่งเงินเป็นซอง บันทึกรายรับรายจ่าย และกระทบยอดให้ตรงกับธนาคาร"
       },
       {
+        "id": "mail-discord-bot",
+        "tag": "oss",
+        "stack": [
+          "Cloudflare Workers",
+          "KV",
+          "Gmail API",
+          "Microsoft Graph",
+          "Discord"
+        ],
+        "links": {
+          "code": "https://github.com/nattawai/mail-discord-bot"
+        },
+        "title": "Mail Discord Bot",
+        "desc": "บอท Discord รวมอีเมล Gmail และ Outlook หลายบัญชี แจ้งเตือนเมลใหม่ภายในราว 1 นาที กดอ่านเต็ม ตอบกลับ ทำเครื่องหมายอ่านแล้ว หรือลบได้จากในแชต รันบน Cloudflare Workers แพ็กเกจฟรี"
+      },
+      {
         "id": "shalam-console",
         "tag": "desktop",
         "stack": [

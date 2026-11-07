@@ -127,6 +127,22 @@
         "desc": "A multi-wallet app on LINE: split money into envelopes, track income and spending, and reconcile with the bank."
       },
       {
+        "id": "mail-discord-bot",
+        "tag": "oss",
+        "stack": [
+          "Cloudflare Workers",
+          "KV",
+          "Gmail API",
+          "Microsoft Graph",
+          "Discord"
+        ],
+        "links": {
+          "code": "https://github.com/nattawai/mail-discord-bot"
+        },
+        "title": "Mail Discord Bot",
+        "desc": "A Discord bot for multiple Gmail and Outlook accounts: new-mail alerts within about a minute, with read, reply, mark-as-read and delete right from the chat. Runs on the Cloudflare Workers free plan."
+      },
+      {
         "id": "shalam-console",
         "tag": "desktop",
         "stack": [

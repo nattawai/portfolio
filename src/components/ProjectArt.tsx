@@ -122,7 +122,33 @@ function Workflow() {
   )
 }
 
+function MailBot() {
+  // ซองจดหมาย → การ์ดแจ้งเตือนในแชต + ปุ่ม อ่าน/ตอบ/อ่านแล้ว/ลบ
+  return (
+    <>
+      <Bg />
+      <rect x="24" y="66" width="76" height="54" rx="8" className="fill-surface" />
+      <path d="M24 74l38 28 38-28" className="fill-none stroke-ink/25" strokeWidth="3" strokeLinejoin="round" />
+      <circle cx="96" cy="68" r="10" className="fill-clay" />
+      <path d="M108 93h28" className="stroke-ink/30" strokeWidth="3" />
+      <path d="m130 87 8 6-8 6" className="fill-none stroke-ink/30" strokeWidth="3" strokeLinejoin="round" />
+      <rect x="148" y="40" width="152" height="120" rx="10" className="fill-surface" />
+      <rect x="148" y="40" width="5" height="120" rx="2.5" className="fill-sage" />
+      <circle cx="172" cy="62" r="9" className="fill-sage/70" />
+      <rect x="188" y="56" width="72" height="7" rx="3.5" className="fill-ink/35" />
+      <rect x="188" y="68" width="48" height="5" rx="2.5" className="fill-ink/20" />
+      {[88, 100, 112].map((y, i) => (
+        <rect key={y} x="164" y={y} width={i === 2 ? 70 : 118} height="6" rx="3" className="fill-ink/20" />
+      ))}
+      {[164, 198, 232, 266].map((x, i) => (
+        <rect key={x} x={x} y="130" width="28" height="16" rx="5" className={i === 0 ? 'fill-sage' : i === 3 ? 'fill-clay/70' : 'fill-ink/15'} />
+      ))}
+    </>
+  )
+}
+
 const ART: Record<string, () => React.JSX.Element> = {
+  'mail-discord-bot': MailBot,
   'web-studio': WebStudio,
   'ts-planner': TsPlanner,
   shalapao: Shalapao,
