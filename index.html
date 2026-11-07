@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="th">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -9,6 +9,7 @@
     <meta property="og:title" content="Natthasak Wiwatwisawakorn — Senior Full-Stack Developer" />
     <meta property="og:description" content="Full-Stack Developer focused on backend and AI integration — finance, risk control management and HR systems." />
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
     <meta property="og:url" content="https://portfolio.waivern.org/" />
     <meta property="og:image" content="https://portfolio.waivern.org/og-image.png" />
     <meta property="og:image:width" content="1200" />
@@ -17,8 +18,14 @@
     <link rel="canonical" href="https://portfolio.waivern.org/" />
     <meta name="theme-color" content="#1c1a17" media="(prefers-color-scheme: dark)" />
     <meta name="theme-color" content="#faf6f1" media="(prefers-color-scheme: light)" />
-    <!-- ตั้งธีมก่อน paint กันจอกะพริบ: ค่าที่ผู้ชมเลือกเอง > ค่าของเครื่อง -->
+    <!-- ก่อน paint: (1) ไปหน้าภาษาที่ผู้ชมเคยเลือก / ภาษาเครื่องเป็นไทย → /th/  (2) ตั้งธีม กันจอกะพริบ -->
     <script>
+      try {
+        var here = location.pathname.indexOf('/th') === 0 ? 'th' : 'en'
+        var saved = localStorage.getItem('lang')
+        var want = saved === 'th' || saved === 'en' ? saved : here === 'en' && /^th/i.test(navigator.language) ? 'th' : here
+        if (want !== here) location.replace((want === 'th' ? '/th/' : '/') + location.search + location.hash)
+      } catch (e) {}
       try {
         var t = localStorage.getItem('theme')
         if (t === 'dark' || t === 'light') document.documentElement.dataset.theme = t
@@ -39,6 +46,32 @@
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=JetBrains+Mono:wght@500&family=Manrope:wght@600;700;800&display=swap"
       />
     </noscript>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Natthasak Wiwatwisawakorn",
+        "alternateName": "ณัฐศักดิ์ วิวัฒน์วิศวกร",
+        "jobTitle": "Senior Full-Stack Developer",
+        "url": "https://portfolio.waivern.org/",
+        "image": "https://portfolio.waivern.org/og-image.png",
+        "email": "mailto:natthasak.w@waivern.org",
+        "knowsAbout": [
+          "Full-stack development",
+          "Backend development",
+          "AI integration",
+          "Financial systems",
+          "Risk management systems",
+          "HR systems",
+          "BPMN"
+        ],
+        "sameAs": [
+          "https://www.linkedin.com/in/natthasak-w",
+          "https://github.com/natthasak-w",
+          "https://github.com/nattawai"
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

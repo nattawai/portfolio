@@ -6,33 +6,34 @@ import en from './en.json'
 export const LANGS = ['th', 'en'] as const
 export type Lang = (typeof LANGS)[number]
 const KEY = 'lang'
+const isBrowser = typeof window !== 'undefined'
 
-function initialLang(): Lang {
-  try {
-    const saved = localStorage.getItem(KEY)
-    if (saved === 'th' || saved === 'en') return saved
-  } catch {
-    /* storage อาจถูกปิด */
-  }
-  return navigator.language.startsWith('th') ? 'th' : 'en'
-}
+/** ภาษาผูกกับ URL: `/` = อังกฤษ, `/th/` = ไทย (HTML ของทั้งสองหน้า prerender ไว้ตอน build) */
+export const pathFor = (l: Lang) => (l === 'th' ? '/th/' : '/')
+export const langFromPath = (p: string): Lang => (p.startsWith('/th') ? 'th' : 'en')
 
 i18n.use(initReactI18next).init({
   resources: { th: { translation: th }, en: { translation: en } },
-  lng: initialLang(),
+  lng: isBrowser ? langFromPath(location.pathname) : 'en',
   fallbackLng: 'en',
   interpolation: { escapeValue: false },
 })
 
-function syncHtmlLang(lng: string) {
-  document.documentElement.lang = lng
-  try {
-    localStorage.setItem(KEY, lng)
-  } catch {
-    /* ignore */
-  }
+// ผู้ชมกดสลับภาษา → จำไว้ + เปลี่ยน URL ให้ตรง (ไม่โหลดหน้าใหม่)
+if (isBrowser) {
+  i18n.on('languageChanged', (lng) => {
+    const l = lng as Lang
+    document.documentElement.lang = l
+    try {
+      localStorage.setItem(KEY, l)
+    } catch {
+      /* storage อาจถูกปิด */
+    }
+    if (langFromPath(location.pathname) !== l) {
+      history.replaceState(null, '', pathFor(l) + location.search + location.hash)
+    }
+    document.title = i18n.t('meta.title')
+  })
 }
-syncHtmlLang(i18n.language)
-i18n.on('languageChanged', syncHtmlLang)
 
 export default i18n

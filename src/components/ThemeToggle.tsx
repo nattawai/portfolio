@@ -7,6 +7,7 @@ const media = () => window.matchMedia('(prefers-color-scheme: dark)')
 
 // ธีมที่ใช้อยู่จริง: ค่าที่ผู้ชมเลือก (data-theme จาก script ใน index.html) > ค่าของเครื่อง
 function current(): Theme {
+  if (typeof document === 'undefined') return 'dark' // ตอน prerender
   const set = document.documentElement.dataset.theme
   if (set === 'dark' || set === 'light') return set
   return media().matches ? 'dark' : 'light'
