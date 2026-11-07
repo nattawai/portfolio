@@ -1,4 +1,4 @@
-import { useRef, useState, type KeyboardEvent } from 'react'
+import { useEffect, useRef, useState, type KeyboardEvent, type WheelEvent } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Section } from '../components/Section'
 import { Monitor, ProjectArt } from '../components/ProjectArt'
@@ -50,6 +50,28 @@ function Details({ p }: { p: Project }) {
 function Stage({ items }: { items: Project[] }) {
   const { t } = useTranslation()
   const [active, setActive] = useState(0)
+  // ไล่สีจางขอบบน/ล่างเมื่อยังเลื่อนต่อได้ (บอกว่ารายการยังมีอีก)
+  const [fade, setFade] = useState({ top: false, bottom: true })
+  const onScroll = (el: HTMLElement) => {
+    setFade({ top: el.scrollTop > 4, bottom: el.scrollTop + el.clientHeight < el.scrollHeight - 4 })
+  }
+  const list = useRef<HTMLDivElement>(null)
+  // วัดใหม่เมื่อขนาดเปลี่ยน (เช่น ซ่อนอยู่ตอนจอแคบ แล้วขยายจอ)
+  useEffect(() => {
+    const el = list.current
+    if (!el) return
+    const ro = new ResizeObserver(() => onScroll(el))
+    ro.observe(el)
+    return () => ro.disconnect()
+  }, [])
+  // ล้อเมาส์: ถ้ากล่องยังเลื่อนไปทางนั้นได้ → เลื่อนกล่อง (กันไม่ให้ Lenis เลื่อนทั้งหน้า)
+  // สุดกล่องแล้ว → ปล่อยให้หน้าเลื่อนต่อ ไม่ติดค้าง
+  const onWheel = (e: WheelEvent<HTMLDivElement>) => {
+    const el = e.currentTarget
+    const canDown = el.scrollTop + el.clientHeight < el.scrollHeight - 1
+    const canUp = el.scrollTop > 0
+    if ((e.deltaY > 0 && canDown) || (e.deltaY < 0 && canUp)) e.stopPropagation()
+  }
   const tabs = useRef<(HTMLButtonElement | null)[]>([])
   const p = items[active]
 
@@ -65,7 +87,20 @@ function Stage({ items }: { items: Project[] }) {
 
   return (
     <div className="hidden gap-8 md:grid md:grid-cols-[minmax(0,15rem)_1fr] lg:gap-10">
-      <div role="tablist" aria-orientation="vertical" aria-label={t('projects.title')} onKeyDown={onKey} className="flex flex-col gap-1">
+      {/* รายการยาว → เลื่อนในกล่องเอง สูงไม่เกินจอภาพ+รายละเอียด */}
+      <div
+        role="tablist"
+        aria-orientation="vertical"
+        aria-label={t('projects.title')}
+        onKeyDown={onKey}
+        onScroll={(e) => onScroll(e.currentTarget)}
+        ref={list}
+        onWheel={onWheel}
+        style={{
+          maskImage: `linear-gradient(to bottom, ${fade.top ? 'transparent' : 'black'}, black 2.5rem, black calc(100% - 2.5rem), ${fade.bottom ? 'transparent' : 'black'})`,
+        }}
+        className="scrollbar-thin flex max-h-[30rem] flex-col gap-1 overflow-y-auto pr-1 lg:max-h-[34rem]"
+      >
         {items.map((it, i) => {
           const on = i === active
           return (

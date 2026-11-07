@@ -125,3 +125,9 @@ html:lang(en) .section-label {
     transform: none !important;
   }
 }
+
+/* แถบเลื่อนบาง ๆ สำหรับกล่องรายการผลงาน */
+@utility scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in oklab, var(--ink-soft) 45%, transparent) transparent;
+}
