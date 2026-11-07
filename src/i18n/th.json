@@ -147,7 +147,7 @@
           "Figma",
           "Node.js",
           "JavaScript",
-          "PHP",
+          "Joomla",
           "QR Code"
         ],
         "links": {
@@ -217,7 +217,7 @@
         "company": "บริษัท วี เชฟ (ประเทศไทย) จำกัด",
         "points": [
           "ร่วมจัดงานอีเวนต์นอกสถานที่ รวมรถ Food Truck หลายเจ้ามาออกร้านในงานเดียว",
-          "พัฒนาเว็บไซต์บริษัท wechefthailand.com ด้วย JavaScript และ PHP",
+          "พัฒนาเว็บไซต์บริษัท wechefthailand.com ด้วย Joomla",
           "ออกแบบ UX/UI ด้วย Figma ทั้งหน้าเว็บสำหรับแอดมินและแอปมือถือ เช่น ระบบสั่งข้าวกล่องสำหรับบริษัท (Lunchbox)",
           "พัฒนาระบบสั่งอาหารออนไลน์คู่กับตู้เก็บอาหาร ลูกค้าสแกน QR Code เพื่อเปิดตู้รับอาหารเอง",
           "พัฒนา back-end service ด้วย Node.js รวมถึงเว็บจองพื้นที่ขายสำหรับ Food Truck",
@@ -229,8 +229,8 @@
         "role": "Software Engineer",
         "company": "บริษัท คอมพิวเตอร์ เทเลโฟนี เอเซีย จำกัด",
         "points": [
-          "พัฒนาเว็บด้วย JavaScript",
-          "พัฒนาแอป iOS (Objective-C) และ Android (Java)"
+          "พัฒนาเว็บแอปด้วย JavaScript",
+          "ร่วมพัฒนาแอป iOS ชื่อ Dinsow ด้วย Objective-C สำหรับเชื่อมต่อและสั่งงานหุ่นยนต์ Dinsow"
         ]
       }
     ],

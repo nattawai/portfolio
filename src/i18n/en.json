@@ -147,7 +147,7 @@
           "Figma",
           "Node.js",
           "JavaScript",
-          "PHP",
+          "Joomla",
           "QR Code"
         ],
         "links": {
@@ -217,7 +217,7 @@
         "company": "We Chef (Thailand) Co., Ltd.",
         "points": [
           "Co-organized off-site events that brought many food trucks together in one venue",
-          "Built the company website wechefthailand.com with JavaScript and PHP",
+          "Built the company website wechefthailand.com with Joomla",
           "Designed UX/UI in Figma for admin web apps and mobile apps, such as a corporate lunchbox ordering system",
           "Built an online food ordering system with smart lockers that customers open by scanning a QR code",
           "Built Node.js back-end services, including a food-truck space booking web app",
@@ -229,8 +229,8 @@
         "role": "Software Engineer",
         "company": "Computer Telephony Asia Co., Ltd.",
         "points": [
-          "Web development with JavaScript",
-          "Native app development for iOS (Objective-C) and Android (Java)"
+          "Built web apps with JavaScript",
+          "Worked on Dinsow, an iOS app in Objective-C for connecting to and controlling the Dinsow robot"
         ]
       }
     ],
