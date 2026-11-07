@@ -54,6 +54,7 @@ workflow: `web-studio` plugin (`E:\Workspace\Claude Plugins\web-studio`)
 | 2026-11-07 | Skills: hover แต่ละตัวมีลูกเล่นเฉพาะ (คลาส `fx-*` ใน global.css) + ย้อมสีแบรนด์ | ผู้ใช้ขอ; ปิดเมื่อ reduced-motion |
 | 2026-11-07 | การศึกษา: TNI 2553–2557 + โรงเรียนกรุงเทพคริสเตียนวิทยาลัย ป.1–ม.6 (ใส่แล้ว) | ผู้ใช้ให้ข้อมูล |
 | 2026-11-07 | เพิ่มผลงาน waivern.org (ใช้งานจริง) และ Shalam Console (แอปเดสก์ท็อป · tag ใหม่ `desktop`) จาก F:\Project | ผู้ใช้เลือก; Archmap ยังไม่ใส่เพราะยังมีบัค — ใส่ทีหลังได้ |
+| 2026-11-07 | Redesign (faseeh layout + เวที moritz + ธีมมืดอุ่น) + ผลงานใหม่ merge เข้า main และ deploy แล้ว (c6e0169) | ผู้ใช้อนุมัติ; ตรวจเว็บจริงแล้ว ภาพ/ข้อความใหม่ขึ้นครบ |
 | 2026-11-07 | ภาพจริงในจอเพิ่ม: waivern (แคปหน้า /oil สาธารณะ), Shalapao (เปิดหน้าเว็บบนเครื่องแล้วป้อนข้อมูลตัวอย่าง — ไม่ใช่เงินจริง, เว็บจริงต้องล็อกอิน LINE), Shalam Console (ภาพ hi-fi ที่อนุมัติแล้วใน repo, ชื่อผู้ใช้เป็นตัวอย่าง) | ผู้ใช้ขอให้แคปงานที่มีหน้าจอ; web-studio เป็น plugin ไม่มีหน้าจอ จึงยังเป็น SVG |
 ## Deploy
 push เข้า `main` → Cloudflare build (`npm run build`, output `dist`) และ deploy เอง
