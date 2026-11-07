@@ -63,8 +63,9 @@
   --color-on-clay: var(--on-clay);
   --color-bezel: var(--bezel);
 
-  --font-sans: "Manrope", "Anuphan", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "JetBrains Mono", "Anuphan", ui-monospace, monospace;
+  --font-sans: "IBM Plex Sans Thai", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Manrope", "IBM Plex Sans Thai", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "IBM Plex Sans Thai", ui-monospace, monospace;
   --radius-card: var(--radius-card);
   --shadow-soft: var(--shadow-soft);
 }

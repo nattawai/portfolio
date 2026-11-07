@@ -34,7 +34,7 @@
 ผ่าน AA ทุกคู่ (≥ 4.5)
 
 ## Typography
-- อังกฤษ: **Manrope** · ไทย: **Anuphan** · ป้ายหัวข้อ/ปี/stack: **JetBrains Mono** (ไทย fallback ไป Anuphan) — Google Fonts ทั้งหมด
+- หัวข้อ: **Manrope** (ไทยในหัวข้อ fallback ไป IBM Plex Sans Thai) · เนื้อหา: **IBM Plex Sans Thai** (ทั้งไทยและอังกฤษ) · ป้ายหัวข้อ/ปี/stack: **JetBrains Mono** — Google Fonts ทั้งหมด
 - ชื่อใน Header ใช้ `clamp()`; ภาษาไทยตัวใหญ่ line-height ≥ 1.15
 - ป้ายหัวข้อ EN: uppercase + tracking กว้าง; TH: ไม่ใส่ tracking
 

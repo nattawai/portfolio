@@ -13,7 +13,7 @@ export function About() {
 
   return (
     <Section id="about" label={t('about.title')}>
-      <p className="text-[clamp(1.375rem,3vw,1.75rem)] font-bold leading-snug [html:lang(th)_&]:leading-[1.45]">
+      <p className="font-heading text-[clamp(1.375rem,3vw,1.75rem)] font-bold leading-snug [html:lang(th)_&]:leading-[1.45]">
         {t('about.lead')}
       </p>
 
@@ -27,7 +27,7 @@ export function About() {
         {stats.map((s) => (
           <div data-reveal key={s.label} className="flex flex-col-reverse justify-end rounded-card bg-surface p-4 sm:p-5">
             <dt className="mt-1 text-xs leading-snug text-ink-soft sm:text-sm">{s.label}</dt>
-            <dd data-count className="text-3xl font-extrabold text-ink sm:text-4xl">{s.value}</dd>
+            <dd data-count className="font-heading text-3xl font-extrabold text-ink sm:text-4xl">{s.value}</dd>
           </div>
         ))}
       </dl>

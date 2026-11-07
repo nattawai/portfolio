@@ -16,7 +16,7 @@ export function Contact() {
   return (
     <>
       <Section id="contact" label={t('contact.title')}>
-        <p className="text-[clamp(1.75rem,4.5vw,2.5rem)] font-extrabold leading-tight [html:lang(th)_&]:leading-[1.25]">
+        <p className="font-heading text-[clamp(1.75rem,4.5vw,2.5rem)] font-extrabold leading-tight [html:lang(th)_&]:leading-[1.25]">
           {t('contact.lead')}
         </p>
         <p className="mt-3 text-lg leading-relaxed text-ink-soft">{t('contact.body')}</p>

@@ -13,11 +13,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* ภาษาไทยใช้ Anuphan นำ */
-html:lang(th) body {
-  font-family: "Anuphan", "Manrope", ui-sans-serif, system-ui, sans-serif;
-}
-
 :focus-visible {
   outline: 2px solid var(--sage-ink);
   outline-offset: 3px;

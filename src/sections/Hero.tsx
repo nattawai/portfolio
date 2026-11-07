@@ -19,7 +19,7 @@ export function Hero() {
             <img src="/profile.webp" alt={t('hero.photoAlt')} className="size-full object-cover grayscale" />
           ) : (
             <div className="flex size-full items-center justify-center bg-gradient-to-br from-sage/45 to-clay/35">
-              <span aria-hidden className="text-4xl font-extrabold text-ink/80 sm:text-5xl">NW</span>
+              <span aria-hidden className="font-heading text-4xl font-extrabold text-ink/80 sm:text-5xl">NW</span>
             </div>
           )}
         </div>
@@ -28,7 +28,7 @@ export function Hero() {
           <p className="text-ink-soft">{t('hero.greeting')}</p>
           <h1
             id="hero-title"
-            className="mt-1 text-[clamp(2rem,6.5vw,3.75rem)] font-extrabold leading-[1.1] tracking-tight [html:lang(th)_&]:leading-[1.2]"
+            className="font-heading mt-1 text-[clamp(2rem,6.5vw,3.75rem)] font-extrabold leading-[1.1] tracking-tight [html:lang(th)_&]:leading-[1.2]"
           >
             <span className="block">{t('hero.firstName')}</span>
             <span className="block text-ink-soft">{t('hero.lastName')}</span>

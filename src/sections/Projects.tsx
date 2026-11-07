@@ -109,7 +109,7 @@ function Stage({ items }: { items: Project[] }) {
           ))}
         </Monitor>
         <div className="mt-6" aria-live="polite">
-          <h3 className="text-xl font-bold">{p.title}</h3>
+          <h3 className="font-heading text-xl font-bold">{p.title}</h3>
           <div className="mt-2">
             <Details p={p} />
           </div>
@@ -130,7 +130,7 @@ function Cards({ items }: { items: Project[] }) {
             <ProjectArt id={p.id} className="absolute inset-0 size-full" />
           </Monitor>
           <p className="mt-4 font-mono text-xs text-sage-ink">{t(`projects.tags.${p.tag}`)}</p>
-          <h3 className="mt-1 text-lg font-bold leading-snug">{p.title}</h3>
+          <h3 className="font-heading mt-1 text-lg font-bold leading-snug">{p.title}</h3>
           <div className="mt-2 text-sm">
             <Details p={p} />
           </div>

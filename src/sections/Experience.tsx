@@ -28,7 +28,7 @@ export function Experience() {
                 <span className="rounded-full bg-sage-ink px-2 py-0.5 text-xs font-bold text-bg">{t('experience.current')}</span>
               )}
             </div>
-            <p className="mt-1 text-lg font-bold">{j.role}</p>
+            <p className="font-heading mt-1 text-lg font-bold">{j.role}</p>
             <p className="text-ink-soft">{j.company}</p>
             <ul className="mt-3 list-disc space-y-1 pl-5 leading-relaxed text-ink-soft marker:text-sage">
               {j.points.map((p) => <li key={p}>{p}</li>)}
@@ -41,7 +41,7 @@ export function Experience() {
         {/* งานนอกสาย dev — แยกจาก timeline ให้ประวัติต่อเนื่องโดยไม่ปนกับงาน dev */}
         <div data-reveal className="rounded-card border border-ink/10 p-5">
           <p className={sub}>{other.title} · {other.years}</p>
-          <p className="mt-2 font-bold">{other.role}</p>
+          <p className="font-heading mt-2 font-bold">{other.role}</p>
           <p className="text-sm text-ink-soft">{other.company}</p>
         </div>
         <div data-reveal className="rounded-card bg-surface p-5">
