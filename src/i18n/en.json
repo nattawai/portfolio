@@ -141,6 +141,22 @@
         "desc": "A desktop app for Twitch streamers that puts chat, events, channel points, bots, overlays and OBS control on one screen. Runs locally, no server needed."
       },
       {
+        "id": "wechef",
+        "tag": "live",
+        "stack": [
+          "Figma",
+          "Node.js",
+          "JavaScript",
+          "PHP",
+          "QR Code"
+        ],
+        "links": {
+          "demo": "https://wechefthailand.com/2021/"
+        },
+        "title": "We Chef — Food Truck Platform",
+        "desc": "Work at We Chef: the company website, UX/UI design in Figma (admin web and mobile apps), online ordering with QR-code food lockers, and a space booking web app for food trucks."
+      },
+      {
         "id": "finance-risk",
         "tag": "enterprise",
         "stack": [
@@ -200,8 +216,12 @@
         "role": "Software Engineer",
         "company": "We Chef (Thailand) Co., Ltd.",
         "points": [
-          "Designed and built websites with JavaScript and PHP",
-          "Built Node.js back-end services, including a food-truck space booking web app"
+          "Co-organized off-site events that brought many food trucks together in one venue",
+          "Built the company website wechefthailand.com with JavaScript and PHP",
+          "Designed UX/UI in Figma for admin web apps and mobile apps, such as a corporate lunchbox ordering system",
+          "Built an online food ordering system with smart lockers that customers open by scanning a QR code",
+          "Built Node.js back-end services, including a food-truck space booking web app",
+          "Handled basic networking, such as a Wi-Fi captive login page"
         ]
       },
       {

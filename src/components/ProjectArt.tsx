@@ -138,6 +138,8 @@ const SCREEN: Record<string, string> = {
   shalapao: '/projects/shalapao.webp',
   // ภาพ hi-fi ที่อนุมัติแล้ว (แอปเรนเดอร์ตรงกัน) · ชื่อผู้ใช้ในภาพเป็นข้อมูลตัวอย่าง
   'shalam-console': '/projects/shalam-console.webp',
+  // เว็บไซต์จริง + งาน Figma (Lunchbox) ของ We Chef · ข้อมูลในดีไซน์เป็นตัวอย่าง
+  wechef: '/projects/wechef.webp',
 }
 
 export function ProjectArt({ id, className }: { id: string; className?: string }) {
