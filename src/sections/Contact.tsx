@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next'
 import { Section } from '../components/Section'
 import { ArrowUpRight, MailIcon } from '../components/Icons'
 
+// ไม่ใส่ data-reveal ใน Contact: อยู่ท้ายหน้า trigger ใกล้ขอบล่างสุด → ค้างแล้วเด้ง (จอเตี้ยไม่ขึ้นเลย)
 // Resume: วางไฟล์ที่ public/resume.pdf แล้วเปลี่ยนเป็น true
 const HAS_RESUME = false
 
@@ -15,13 +16,12 @@ export function Contact() {
   return (
     <>
       <Section id="contact" label={t('contact.title')}>
-        <p data-reveal className="text-[clamp(1.75rem,4.5vw,2.5rem)] font-extrabold leading-tight [html:lang(th)_&]:leading-[1.25]">
+        <p className="text-[clamp(1.75rem,4.5vw,2.5rem)] font-extrabold leading-tight [html:lang(th)_&]:leading-[1.25]">
           {t('contact.lead')}
         </p>
-        <p data-reveal className="mt-3 text-lg leading-relaxed text-ink-soft">{t('contact.body')}</p>
+        <p className="mt-3 text-lg leading-relaxed text-ink-soft">{t('contact.body')}</p>
 
         <a
-          data-reveal
           href={`mailto:${email}`}
           className="mt-8 inline-flex max-w-full items-center gap-2 rounded-full bg-clay px-6 py-3 font-bold text-on-clay shadow-soft transition-transform hover:-translate-y-0.5"
         >
@@ -29,7 +29,7 @@ export function Contact() {
           <span className="break-all">{email}</span>
         </a>
 
-        <div data-reveal className="mt-5 flex flex-wrap gap-2">
+        <div className="mt-5 flex flex-wrap gap-2">
           <a href={t('contact.linkedin')} target="_blank" rel="noopener noreferrer" className={link}>
             LinkedIn <ArrowUpRight />
           </a>
