@@ -94,6 +94,7 @@ const FX: Record<string, string> = {
   'iOS (Objective-C)': 'fx-tilt',
   'Android (Java)': 'fx-hop',
   'Nintex K2 / Workflow Cloud': 'fx-dash', // งานไหลต่อ
+  BPMN: 'fx-dash', // ผังกระบวนการ
   DocuSign: 'fx-draw', // เขียนลายเซ็น
   'ERP API': 'fx-shake',
   'REST API': 'fx-shake',
