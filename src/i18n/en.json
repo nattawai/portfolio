@@ -8,7 +8,6 @@
     "projects": "Projects",
     "experience": "Experience",
     "contact": "Contact",
-    "resume": "Resume",
     "about": "About",
     "toLight": "Switch to light theme",
     "toDark": "Switch to dark theme",
@@ -290,7 +289,6 @@
       "https://github.com/nattawai"
     ],
     "emailLabel": "Email me",
-    "resume": "Download resume",
     "footer": "Designed and built by Natthasak · Made with React and web-studio"
   },
   "skills": {

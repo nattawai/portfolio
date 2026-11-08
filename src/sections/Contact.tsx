@@ -3,8 +3,6 @@ import { Section } from '../components/Section'
 import { ArrowUpRight, MailIcon } from '../components/Icons'
 
 // ไม่ใส่ data-reveal ใน Contact: อยู่ท้ายหน้า trigger ใกล้ขอบล่างสุด → ค้างแล้วเด้ง (จอเตี้ยไม่ขึ้นเลย)
-// Resume: วางไฟล์ที่ public/resume.pdf แล้วเปลี่ยนเป็น true
-const HAS_RESUME = false
 
 export function Contact() {
   const { t } = useTranslation()
@@ -38,9 +36,6 @@ export function Contact() {
               GitHub · {g.split('/').pop()} <ArrowUpRight />
             </a>
           ))}
-          {HAS_RESUME && (
-            <a href="/resume.pdf" download className={link}>{t('contact.resume')} ⬇</a>
-          )}
         </div>
       </Section>
 

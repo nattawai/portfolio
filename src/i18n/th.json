@@ -8,7 +8,6 @@
     "projects": "ผลงาน",
     "experience": "ประสบการณ์",
     "contact": "ติดต่อ",
-    "resume": "Resume",
     "about": "เกี่ยวกับ",
     "toLight": "เปลี่ยนเป็นธีมสว่าง",
     "toDark": "เปลี่ยนเป็นธีมมืด",
@@ -290,7 +289,6 @@
       "https://github.com/nattawai"
     ],
     "emailLabel": "ส่งอีเมล",
-    "resume": "ดาวน์โหลด Resume",
     "footer": "ออกแบบและพัฒนาโดยณัฐศักดิ์ · สร้างด้วย React และ web-studio"
   },
   "skills": {
