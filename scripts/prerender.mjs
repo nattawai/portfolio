@@ -12,7 +12,7 @@ const OG_LOCALE = { en: 'en_US', th: 'th_TH' }
 
 const dist = resolve('dist')
 const template = readFileSync(resolve(dist, 'index.html'), 'utf8')
-const { render } = await import(pathToFileURL(resolve('dist-ssr/entry-server.js')).href)
+const { render, render404 } = await import(pathToFileURL(resolve('dist-ssr/entry-server.js')).href)
 
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;')
 
@@ -41,6 +41,18 @@ for (const lang of ['en', 'th']) {
   mkdirSync(dir, { recursive: true })
   writeFileSync(resolve(dir, 'index.html'), out)
   console.log(`prerender ${lang}: ${PATH[lang]} (${(out.length / 1024).toFixed(1)} kB)`)
+}
+
+// 404.html: Cloudflare Pages ใช้ไฟล์นี้ตอบ status 404 ให้ทุก URL ที่ไม่มี (แทน SPA fallback ที่ตอบ 200)
+{
+  const { html, title } = await render404()
+  const out = template
+    .replace(/<html lang="[^"]*"/, '<html lang="en" data-page="404"')
+    .replace(/<title>[^<]*<\/title>/, `<title>${esc(title)}</title>\n    <meta name="robots" content="noindex" />`)
+    .replace(/\s*<link rel="canonical"[^>]*>/, '')
+    .replace('<div id="root"></div>', `<div id="root" data-page="404">${html}</div>`)
+  writeFileSync(resolve(dist, '404.html'), out)
+  console.log('prerender 404: /404.html')
 }
 
 rmSync(resolve('dist-ssr'), { recursive: true, force: true })

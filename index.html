@@ -24,7 +24,7 @@
         var here = location.pathname.indexOf('/th') === 0 ? 'th' : 'en'
         var saved = localStorage.getItem('lang')
         var want = saved === 'th' || saved === 'en' ? saved : here === 'en' && /^th/i.test(navigator.language) ? 'th' : here
-        if (want !== here) location.replace((want === 'th' ? '/th/' : '/') + location.search + location.hash)
+        if (want !== here && document.documentElement.dataset.page !== '404') location.replace((want === 'th' ? '/th/' : '/') + location.search + location.hash)
       } catch (e) {}
       try {
         var t = localStorage.getItem('theme')
